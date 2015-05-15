@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="shape" opacity="0.45703125" index="0" shape_type="Rectangle" color="0 " xpos="-361.1" ypos="310.8" width="1012.5" height="25.8" rotation="0"/>
+  <item type="shape" opacity="0.27734375" index="1" shape_type="Rectangle" color="15547393 " xpos="-366.65" ypos="249.4" width="1012.5" height="61.3" rotation="0"/>
+  <item type="shape" opacity="1" index="2" shape_type="Burst" color="16640551 " xpos="109.95" ypos="228.85" width="84.95" height="85.1" rotation="0"/>
+  <item type="image" opacity="1" index="3" source="assets/graphics/Lower Thirds/2.png" xpos="61.5" ypos="271.25" width="510" height="88" rotation="0"/>
+  <item type="shape" opacity="1" index="4" shape_type="Rectangle" color="7607296 " xpos="521.35" ypos="8.85" width="165.7" height="76.8" rotation="0"/>
+  <item type="text" opacity="1" index="5" font="FrnkGothITC Hv BT" size="68" color="15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528@@@15734528" xpos="146.35" ypos="250.25" alignment="center" rotation="0" scalex="0.4032946825027466" scaley="0.4032946825027466" filter="true"><![CDATA[GOOD MORNING AMERICA]]></item>
+  <item type="image" opacity="1" index="6" source="assets/graphics/Other Icons/live1.png" xpos="527.75" ypos="15.25" width="105.35" height="63.2" rotation="0"/>
+  <item type="text" opacity="1" index="7" font="Helvetica Neue" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="77.45" ypos="304.4" alignment="center" rotation="-0.2513529353136515" scalex="0.2678248427935584" scaley="0.2678248427935584" filter="true"><![CDATA[BRING THE BEST IN YOU! A MORNING TIPS]]></item>
+  <item type="text" opacity="1" index="8" font="FrnkGothITC Hv BT" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="470.8" ypos="294.4" alignment="center" rotation="0" scalex="0.2535691559314728" scaley="0.2535691559314728" filter="true"><![CDATA[LOGO 
+HERE]]></item>
+</data>

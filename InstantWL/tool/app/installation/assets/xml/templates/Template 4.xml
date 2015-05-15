@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="image" opacity="1" index="0" source="assets/graphics/Lower Thirds/8.png" xpos="0" ypos="252.75" width="640" height="126" rotation="0"/>
+  <item type="shape" opacity="1" index="1" shape_type="Rectangle" color="16391170 " xpos="527.2" ypos="15.55" width="165.7" height="45.7" rotation="0"/>
+  <item type="text" opacity="1" index="2" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="75.25" ypos="267.75" alignment="center" rotation="0" scalex="0.5399466753005981" scaley="0.5399466753005981" filter="true"><![CDATA[JACKY CHANNEL]]></item>
+  <item type="text" opacity="1" index="3" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215" xpos="539.15" ypos="12.2" alignment="left" rotation="0" scalex="0.5827338099479675" scaley="0.5827338099479675" filter="true"><![CDATA[LIVE]]></item>
+  <item type="text" opacity="1" index="4" font="FrnkGothITC Hv BT" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="55.8" ypos="321.1" alignment="center" rotation="-0.24977337231612956" scalex="0.26951855218389026" scaley="0.26951855218389026" filter="true"><![CDATA[SPORTS COMMENTATOR]]></item>
+  <item type="image" opacity="1" index="5" source="assets/graphics/Social Media/facebook3.png" xpos="530.25" ypos="322.75" width="32.2" height="32.2" rotation="0"/>
+  <item type="image" opacity="1" index="6" source="assets/graphics/Social Media/gPlus2.png" xpos="453.05" ypos="322.75" width="30" height="30" rotation="0"/>
+  <item type="image" opacity="1" index="7" source="assets/graphics/Social Media/twitter3.png" xpos="489.7" ypos="322.75" width="32.3" height="32.3" rotation="0"/>
+</data>

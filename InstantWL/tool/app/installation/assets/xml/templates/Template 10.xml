@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="image" opacity="1" index="0" source="assets/graphics/Placeholders/55.png" xpos="422" ypos="26" width="218" height="252" rotation="0"/>
+  <item type="text" opacity="1" index="1" font="Helvetica Neue" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16635731@@@16635731@@@16635731@@@16635731@@@16635731@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16448650@@@16448650@@@16448650@@@16448650@@@16448650@@@16448650@@@16448650@@@16448650@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="461.65" ypos="92" alignment="center" rotation="0" scalex="0.22372812032699585" scaley="0.22372812032699585" filter="true"><![CDATA[Join TODAY and get 
+instant FREEBIES
+for only]]></item>
+  <item type="text" opacity="1" index="2" font="Lobster Two" size="68" color="8002306@@@8002306@@@8002306@@@8002306@@@8002306@@@8002306@@@8002306@@@8002306@@@8002306" xpos="474.75" ypos="42.25" alignment="left" rotation="0" scalex="0.4112091362476349" scaley="0.4112091362476349" filter="true"><![CDATA[Join Now!]]></item>
+  <item type="text" opacity="1" index="3" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="461.3" ypos="149" alignment="center" rotation="0" scalex="0.46970334649086" scaley="0.46970334649086" filter="true"><![CDATA[$35 USD]]></item>
+  <item type="text" opacity="1" index="4" font="Helvetica Neue" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="459.15" ypos="191.3" alignment="center" rotation="0" scalex="0.19451904296875" scaley="0.19451904296875" filter="true"><![CDATA[instead paying $100 USD]]></item>
+  <item type="shape" opacity="1" index="5" shape_type="Rectangle" color="16639495 " xpos="427.3" ypos="213.65" width="205.3" height="34.6" rotation="0"/>
+  <item type="text" opacity="1" index="6" font="Helvetica Neue" size="68" color="14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441@@@14429441" xpos="462.3" ypos="214.8" alignment="center" rotation="0" scalex="0.1813809871673584" scaley="0.1813809871673584" filter="true"><![CDATA[or visit us at : 
+www.vectorchannel.com]]></item>
+  <item type="image" opacity="1" index="7" source="assets/graphics/Other Icons/visa.png" xpos="561.3" ypos="276.5" width="48.15" height="30.8" rotation="0"/>
+  <item type="image" opacity="1" index="8" source="assets/graphics/Other Icons/paypal.png" xpos="510" ypos="277.15" width="44.65" height="28.55" rotation="0"/>
+  <item type="image" opacity="1" index="9" source="assets/graphics/Other Icons/americanExpress.png" xpos="562.65" ypos="315.5" width="46.4" height="29.65" rotation="0"/>
+  <item type="image" opacity="1" index="10" source="assets/graphics/Other Icons/jcb.png" xpos="511.3" ypos="315.8" width="45.55" height="29.1" rotation="0"/>
+  <item type="image" opacity="1" index="11" source="assets/graphics/Other Icons/mastercard.png" xpos="457.5" ypos="276.65" width="44.9" height="28.7" rotation="0"/>
+  <item type="image" opacity="1" index="12" source="assets/graphics/Other Icons/maestro.png" xpos="458.5" ypos="314.3" width="44.9" height="28.7" rotation="0"/>
+</data>

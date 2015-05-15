@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="shape" opacity="1" index="0" shape_type="Rectangle" color="8065025 " xpos="-13.65" ypos="293.3" width="661.3" height="24" rotation="0"/>
+  <item type="shape" opacity="1" index="2" shape_type="Rectangle" color="6429440 " xpos="-7.65" ypos="316.3" width="661.3" height="44" rotation="0"/>
+  <item type="shape" opacity="0.15625" index="3" shape_type="Rectangle" color="16777215 " xpos="-9.65" ypos="316.65" width="669.3" height="26.6" rotation="0"/>
+  <item type="shape" opacity="1" index="7" shape_type="Rectangle" color="15506176 " xpos="228" ypos="313.3" width="193.3" height="48" rotation="0"/>
+  <item type="text" opacity="1" index="8" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="234" ypos="314.65" alignment="left" rotation="0" scalex="0.346893310546875" scaley="0.346893310546875" filter="true"><![CDATA[DRAKE JOSHUA]]></item>
+  <item type="shape" opacity="1" index="9" shape_type="Rectangle" color="11147008 " xpos="-269" ypos="7.65" width="637.3" height="48" rotation="0"/>
+  <item type="shape" opacity="0.15625" index="10" shape_type="Rectangle" color="16777215 " xpos="-269" ypos="8.3" width="637.3" height="30.6" rotation="0"/>
+  <item type="text" opacity="1" index="11" font="Verdana" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="260" ypos="342.8" alignment="left" rotation="0" scalex="0.13590781390666962" scaley="0.13590781390666962" filter="true"><![CDATA[SPORTS COMMENTATOR]]></item>
+  <item type="shape" opacity="1" index="12" shape_type="Rectangle" color="11147008 " xpos="381.3" ypos="8.3" width="258.6" height="48" rotation="0"/>
+  <item type="shape" opacity="0.15625" index="13" shape_type="Rectangle" color="16777215 " xpos="382" ypos="9" width="262.6" height="30.6" rotation="0"/>
+  <item type="text" opacity="1" index="14" font="FrnkGothITC Hv BT" size="68" color="16707722@@@16707722@@@16707722@@@16707722@@@16707722@@@16707722@@@16707722@@@16707722@@@16707722@@@16707722" xpos="57.65" ypos="4.65" alignment="left" rotation="0" scalex="0.5601164102554321" scaley="0.5601164102554321" filter="true"><![CDATA[FLASH NEWS]]></item>
+  <item type="text" opacity="1" index="15" font="FrnkGothITC Hv BT" size="68" color="16707722@@@16707722@@@16707722@@@16707722" xpos="396.3" ypos="4.65" alignment="left" rotation="0" scalex="0.5601164102554321" scaley="0.5601164102554321" filter="true"><![CDATA[LIVE]]></item>
+  <item type="text" opacity="1" index="16" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="489.3" ypos="14" alignment="left" rotation="0" scalex="0.3668084144592285" scaley="0.3668084144592285" filter="true"><![CDATA[FLORIDA]]></item>
+  <item type="text" opacity="1" index="17" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="443.5" ypos="294.65" alignment="left" rotation="0" scalex="0.21281510591506958" scaley="0.21281510591506958" filter="true"><![CDATA[NEWS STUDIO 2]]></item>
+  <item type="text" opacity="1" index="18" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="98.5" ypos="295" alignment="left" rotation="0" scalex="0.2128143310546875" scaley="0.2128143310546875" filter="true"><![CDATA[NEWS STUDIO 1]]></item>
+  <item type="image" opacity="1" index="19" source="assets/graphics/Other Icons/live2.png" xpos="598.3" ypos="320.65" width="31.3" height="18.8" rotation="0"/>
+  <item type="image" opacity="1" index="20" source="assets/graphics/Other Icons/live2.png" xpos="8.3" ypos="320.65" width="31.3" height="18.8" rotation="0"/>
+  <item type="image" opacity="1" index="21" source="assets/graphics/Other Icons/live2.png" xpos="48.3" ypos="320.65" width="31.3" height="18.8" rotation="0"/>
+  <item type="image" opacity="1" index="22" source="assets/graphics/Other Icons/live2.png" xpos="88.3" ypos="320.65" width="31.3" height="18.8" rotation="0"/>
+  <item type="image" opacity="1" index="23" source="assets/graphics/Other Icons/live2.png" xpos="128.3" ypos="320.65" width="31.3" height="18.8" rotation="0"/>
+  <item type="image" opacity="1" index="24" source="assets/graphics/Other Icons/live2.png" xpos="168.3" ypos="320.65" width="31.3" height="18.8" rotation="0"/>
+  <item type="image" opacity="1" index="25" source="assets/graphics/Other Icons/live2.png" xpos="438.3" ypos="320.65" width="31.3" height="18.8" rotation="0"/>
+  <item type="image" opacity="1" index="26" source="assets/graphics/Other Icons/live2.png" xpos="478.3" ypos="320.65" width="31.3" height="18.8" rotation="0"/>
+  <item type="image" opacity="1" index="27" source="assets/graphics/Other Icons/live2.png" xpos="518.3" ypos="320.65" width="31.3" height="18.8" rotation="0"/>
+  <item type="image" opacity="1" index="28" source="assets/graphics/Other Icons/live2.png" xpos="558.3" ypos="320.65" width="31.3" height="18.8" rotation="0"/>
+  <item type="shape" opacity="0.23828125" index="29" shape_type="Rectangle" color="0 " xpos="27.3" ypos="83" width="278.6" height="189.3" rotation="0"/>
+  <item type="shape" opacity="0.23828125" index="30" shape_type="Rectangle" color="0 " xpos="343.3" ypos="84.3" width="278.6" height="189.3" rotation="0"/>
+</data>

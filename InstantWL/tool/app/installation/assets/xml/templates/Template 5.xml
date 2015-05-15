@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="shape" opacity="1" index="0" shape_type="Rectangle" color="14358016 " xpos="-6.1" ypos="252.2" width="90.1" height="48" rotation="0"/>
+  <item type="text" opacity="1" index="1" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215" xpos="6.65" ypos="251.35" alignment="left" rotation="0" scalex="0.4630466401576996" scaley="0.4630466401576996" filter="true"><![CDATA[LIVE]]></item>
+  <item type="image" opacity="1" index="2" source="assets/graphics/Lower Thirds/27.png" xpos="0" ypos="279" width="640" height="78" rotation="0"/>
+  <item type="image" opacity="0.80859375" index="3" source="assets/graphics/Placeholders/8.png" xpos="412.75" ypos="14.95" width="228" height="353" rotation="0"/>
+  <item type="text" opacity="1" index="4" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="17.45" ypos="285.8" alignment="center" rotation="0" scalex="0.5399466753005981" scaley="0.5399466753005981" filter="true"><![CDATA[JACKY CHANNEL]]></item>
+  <item type="text" opacity="1" index="5" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="19.15" ypos="324.15" alignment="center" rotation="-0.24977337231612956" scalex="0.26951855218389026" scaley="0.26951855218389026" filter="true"><![CDATA[SALES PERSON]]></item>
+  <item type="image" opacity="1" index="6" source="assets/graphics/Other Icons/visa.png" xpos="424.4" ypos="286.35" width="63.5" height="40.6" rotation="0"/>
+  <item type="image" opacity="1" index="7" source="assets/graphics/Other Icons/paypal.png" xpos="494.15" ypos="286.65" width="59.7" height="38.15" rotation="0"/>
+  <item type="image" opacity="1" index="8" source="assets/graphics/Other Icons/mastercard.png" xpos="560.8" ypos="287.2" width="59.45" height="38" rotation="0"/>
+  <item type="text" opacity="1" index="9" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="419.4" ypos="34.15" alignment="center" rotation="0" scalex="0.30600088834762573" scaley="0.30600088834762573" filter="true"><![CDATA[BUY NOW FOR
+SPECIAL DISCOUNT]]></item>
+  <item type="text" opacity="1" index="10" font="FrnkGothITC Hv BT" size="68" color="0@@@0@@@0" xpos="460.55" ypos="106.35" alignment="center" rotation="0" scalex="0.7775081396102905" scaley="0.7775081396102905" filter="true"><![CDATA[$50]]></item>
+  <item type="text" opacity="1" index="11" font="FrnkGothITC Hv BT" size="68" color="16724760@@@16724760@@@16724760@@@16724760@@@16724760@@@16724760" xpos="419.1" ypos="163.65" alignment="center" rotation="0" scalex="0.7000929713249207" scaley="0.7000929713249207" filter="true"><![CDATA[$30USD]]></item>
+  <item type="shape" opacity="1" index="12" shape_type="Rectangle" color="16642330 " xpos="576.65" ypos="164.4" width="129.8" height="4.3" rotation="-160.96919802421377"/>
+  <item type="shape" opacity="1" index="13" shape_type="Rectangle" color="16642330 " xpos="456.65" ypos="157.75" width="130.2" height="4.35" rotation="-17.03625043778933"/>
+  <item type="text" opacity="1" index="14" font="FrnkGothITC Hv BT" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="438.05" ypos="229.7" alignment="center" rotation="0" scalex="0.22485272586345673" scaley="0.22485272586345673" filter="true"><![CDATA[VISIT OUT WEBSITE AT
+WWW.YOURSITE.COM]]></item>
+</data>

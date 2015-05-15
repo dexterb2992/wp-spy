@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="image" opacity="1" index="0" source="assets/graphics/Lower Thirds/1.png" xpos="14.25" ypos="262.75" width="502" height="92" rotation="0"/>
+  <item type="text" opacity="1" index="1" font="FrnkGothITC Hv BT" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="38.85" ypos="241.65" alignment="center" rotation="0" scalex="0.4032946825027466" scaley="0.4032946825027466" filter="true"><![CDATA[MORNING NEWS]]></item>
+  <item type="image" opacity="1" index="2" source="assets/graphics/Other Icons/live1.png" xpos="516.65" ypos="277.75" width="105.35" height="63.2" rotation="0"/>
+  <item type="text" opacity="1" index="3" font="Helvetica Neue" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="26.35" ypos="299.15" alignment="center" rotation="-0.26601547615009136" scalex="0.2399165560501938" scaley="0.2399165560501938" filter="true"><![CDATA[SNEAK PEAK AT THE NY TIMES "BOOK REVIEW"]]></item>
+  <item type="image" opacity="1" index="4" source="assets/graphics/Other Icons/38.png" xpos="401.9" ypos="262.2" width="89.3" height="89.3" rotation="0.26530166554941903"/>
+  <item type="text" opacity="1" index="5" font="FrnkGothITC Hv BT" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="426.65" ypos="289.95" alignment="center" rotation="0" scalex="0.1925415545701981" scaley="0.1925415545701981" filter="true"><![CDATA[YOUR 
+LOGO]]></item>
+</data>

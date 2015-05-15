@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="image" opacity="0.70703125" index="0" source="assets/graphics/Lower Thirds/57.png" xpos="1" ypos="258.5" width="373" height="87" rotation="0"/>
+  <item type="text" opacity="1" index="1" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="16.65" ypos="312.75" alignment="center" rotation="0" scalex="0.2695159912109375" scaley="0.2695159912109375" filter="true"><![CDATA[PLAN DEMONSTRATOR]]></item>
+  <item type="image" opacity="0.62890625" index="2" source="assets/graphics/Placeholders/16.png" xpos="434.4" ypos="50.8" width="224.65" height="279.6" rotation="5.279328393121385"/>
+  <item type="text" opacity="1" index="3" font="FrnkGothITC Hv BT" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="455.25" ypos="196.65" alignment="center" rotation="5.004543830779865" scalex="0.23176427298537297" scaley="0.23176427298537297" filter="true"><![CDATA[LETS TALK ABOUT IT]]></item>
+  <item type="text" opacity="1" index="4" font="FrnkGothITC Hv BT" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="451.85" ypos="130.4" alignment="center" rotation="4.55061134024024" scalex="0.328080503264215" scaley="0.328080503264215" filter="true"><![CDATA[ARE YOU READY
+TO RETIRE?]]></item>
+  <item type="image" opacity="1" index="5" source="uploaded_image/522d0dfb21c47.png" xpos="449.15" ypos="248.3" width="25.1" height="25.1" rotation="46.63297618316428"/>
+  <item type="text" opacity="1" index="6" font="FrnkGothITC Hv BT" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="449.7" ypos="222.2" alignment="center" rotation="4.811965847710049" scalex="0.23137580379520256" scaley="0.23137580379520256" filter="true"><![CDATA[CALL OUR LINE 24/7]]></item>
+  <item type="text" opacity="1" index="7" font="FrnkGothITC Hv BT" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="460.25" ypos="251.35" alignment="center" rotation="5.013301734548511" scalex="0.3251268498063034" scaley="0.3251268498063034" filter="true"><![CDATA[222-333-4444]]></item>
+  <item type="text" opacity="1" index="8" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="14.15" ypos="271.35" alignment="center" rotation="0" scalex="0.5399322509765625" scaley="0.5399322509765625" filter="true"><![CDATA[JACKY CHANNEL]]></item>
+</data>

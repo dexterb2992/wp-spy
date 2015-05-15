@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="shape" opacity="0.3671875" index="0" shape_type="Rectangle" color="13930240 " xpos="-658.65" ypos="277.3" width="1340" height="74.7" rotation="0"/>
+  <item type="image" opacity="1" index="1" source="assets/graphics/Lower Thirds/13.png" xpos="106.5" ypos="275.75" width="446" height="78.7" rotation="0"/>
+  <item type="text" opacity="1" index="2" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="139.3" ypos="291.5" alignment="left" rotation="0" scalex="0.2615804374217987" scaley="0.2615804374217987" filter="true"><![CDATA[EDWARD GARTNER]]></item>
+  <item type="text" opacity="1" index="3" font="FrnkGothITC Hv BT" size="68" color="0@@@0@@@0@@@0" xpos="465.8" ypos="301" alignment="left" rotation="0" scalex="0.2637053430080414" scaley="0.2637053430080414" filter="true"><![CDATA[LOGO]]></item>
+  <item type="image" opacity="1" index="4" source="assets/graphics/Placeholders/16.png" xpos="26.25" ypos="270.3" width="70.8" height="88.1" rotation="-5.686581226528699"/>
+  <item type="text" opacity="1" index="5" font="Courier New" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="138.65" ypos="315.3" alignment="left" rotation="0" scalex="0.18782977759838104" scaley="0.18782977759838104" filter="true"><![CDATA[SALES MARKETING]]></item>
+  <item type="image" opacity="1" index="6" source="assets/graphics/Other Icons/live1.png" xpos="545.65" ypos="292" width="81.15" height="48.7" rotation="0"/>
+  <item type="text" opacity="1" index="7" font="Helvetica Neue" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="38.3" ypos="296.5" alignment="center" rotation="0" scalex="0.13300937414169312" scaley="0.13300937414169312" filter="true"><![CDATA[SAMPLE 
+PRODUCT 
+IMAGE HERE]]></item>
+</data>

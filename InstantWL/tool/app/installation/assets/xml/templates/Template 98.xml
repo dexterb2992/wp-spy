@@ -1,0 +1,14 @@
+<data pattern_url="">
+  <item type="shape" opacity="0.45703125" index="0" shape_type="Rectangle" color="230943 " xpos="323.25" ypos="298.75" width="321.75" height="47.95" rotation="0.2509699697819902"/>
+  <item type="shape" opacity="1" index="1" shape_type="Triangle" color="158998 " xpos="322.75" ypos="336.75" width="29.05" height="25.7" rotation="-62.195622143823925"/>
+  <item type="image" opacity="1" index="2" source="assets/graphics/Lower Thirds/Design 17.png" xpos="-127.25" ypos="270" width="497.85" height="49" rotation="1.2523775115969327"/>
+  <item type="text" opacity="1" index="4" font="Arial" size="40" color="163851@@@163851@@@163851@@@163851@@@163851" xpos="39.25" ypos="281.75" alignment="left" rotation="0.534618620158949" scalex="0.7097324342386089" scaley="0.7097324342386089" filter="true"><![CDATA[CHRIS]]></item>
+  <item type="text" opacity="1" index="5" font="FrnkGothITC Hv BT" size="40" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="131.75" ypos="279.25" alignment="left" rotation="1.5216794128325506" scalex="0.7395186643547853" scaley="0.7395186643547853" filter="true"><![CDATA[JOHNSON]]></item>
+  <item type="image" opacity="1" index="6" source="assets/graphics/Social Media/fb1.png" xpos="371" ypos="306.5" width="30.1" height="30.1" rotation="0.8120211899697739"/>
+  <item type="image" opacity="1" index="7" source="assets/graphics/Social Media/gPlus2.png" xpos="409" ypos="306" width="32" height="32" rotation="0"/>
+  <item type="image" opacity="1" index="8" source="assets/graphics/Social Media/pinterest1.png" xpos="447" ypos="307" width="30" height="30" rotation="0"/>
+  <item type="image" opacity="1" index="9" source="assets/graphics/Social Media/twitter1.png" xpos="485" ypos="306" width="32.9" height="32.9" rotation="2.000296353696773"/>
+  <item type="image" opacity="1" index="10" source="assets/graphics/Social Media/yahoo.png" xpos="527" ypos="300" width="48" height="48" rotation="0"/>
+  <item type="image" opacity="1" index="11" source="assets/graphics/Social Media/youtube (2).png" xpos="581.75" ypos="314.25" width="48.45" height="20.4" rotation="1.5139299205211598"/>
+  <item type="text" opacity="1" index="12" font="Letter Gothic Std" size="40" color="1588739@@@1588739@@@1588739@@@1588739@@@1588739@@@1588739" xpos="40.75" ypos="319" alignment="left" rotation="2.31294667094584" scalex="0.42081402802924683" scaley="0.42081402802924683" filter="true"><![CDATA[artist]]></item>
+</data>

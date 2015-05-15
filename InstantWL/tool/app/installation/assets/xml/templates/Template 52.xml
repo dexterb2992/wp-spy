@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="image" opacity="1" index="0" source="assets/graphics/Lower Thirds/gray05.png" xpos="699.4" ypos="370.8" width="369.85" height="62.65" rotation="-178.99403713649502"/>
+  <item type="shape" opacity="1" index="1" shape_type="Rectangle" color="90726 " xpos="335.2" ypos="314" width="72.15" height="41.4" rotation="-15.01734648640266"/>
+  <item type="shape" opacity="1" index="2" shape_type="Rectangle" color="25178 " xpos="-9.6" ypos="272.2" width="360" height="24" rotation="0"/>
+  <item type="image" opacity="1" index="3" source="assets/graphics/Lower Thirds/gray05.png" xpos="-60" ypos="282.8" width="487.8" height="73.3" rotation="0"/>
+  <item type="text" opacity="1" index="4" font="Archivo Black" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="100.8" ypos="273.2" alignment="left" rotation="0" scalex="0.20772945880889893" scaley="0.20772945880889893" filter="true"><![CDATA[BREAKING NEWS]]></item>
+  <item type="text" opacity="1" index="5" font="Archivo Black" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="99" ypos="296.4" alignment="left" rotation="0" scalex="0.3311105966567993" scaley="0.3311105966567993" filter="true"><![CDATA[FIRST LINE INFO HERE]]></item>
+  <item type="text" opacity="1" index="6" font="Archivo Black" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="419.8" ypos="328" alignment="left" rotation="0" scalex="0.2064218521118164" scaley="0.2064218521118164" filter="true"><![CDATA[SECOND LINE INFO HERE]]></item>
+  <item type="image" opacity="1" index="7" source="assets/graphics/Other Icons/51.png" xpos="19.8" ypos="267.6" width="66.65" height="72.45" rotation="0"/>
+  <item type="text" opacity="1" index="8" font="Archivo Black" size="68" color="0@@@0@@@0@@@0" xpos="29.15" ypos="289.4" alignment="left" rotation="0" scalex="0.2077178955078125" scaley="0.2077178955078125" filter="true"><![CDATA[LOGO]]></item>
+  <item type="image" opacity="1" index="9" source="assets/graphics/Other Icons/live1.png" xpos="570.4" ypos="273.6" width="61.2" height="36.7" rotation="0"/>
+</data>

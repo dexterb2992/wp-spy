@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="shape" opacity="1" index="0" shape_type="Rectangle" color="13270784 " xpos="204" ypos="300.3" width="726.7" height="48" rotation="0"/>
+  <item type="image" opacity="1" index="1" source="assets/graphics/Lower Thirds/Design 19.png" xpos="155.75" ypos="270.75" width="499" height="58" rotation="0"/>
+  <item type="text" opacity="1" index="2" font="Archivo Black" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="188.8" ypos="281.65" alignment="left" rotation="0" scalex="0.300445556640625" scaley="0.300445556640625" filter="true"><![CDATA[PRESENT YOUR VISUALS WELL]]></item>
+  <item type="text" opacity="1" index="3" font="Arial" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="218.3" ypos="325.65" alignment="left" rotation="0" scalex="0.19293999671936035" scaley="0.19293999671936035" filter="true"><![CDATA[GREAT PRESENTATION FOR YOU AND ME]]></item>
+  <item type="image" opacity="1" index="4" source="assets/graphics/Other Icons/49.png" xpos="558" ypos="273" width="70" height="76.1" rotation="0"/>
+  <item type="text" opacity="1" index="5" font="Arial" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="572" ypos="294" alignment="center" rotation="0" scalex="0.19293212890625" scaley="0.19293212890625" filter="true"><![CDATA[LOGO
+HERE]]></item>
+</data>

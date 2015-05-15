@@ -1,0 +1,23 @@
+<data pattern_url="">
+  <item type="image" opacity="1" index="1" source="assets/graphics/Lower Thirds/41.png" xpos="109" ypos="248" width="404" height="102" rotation="0"/>
+  <item type="text" opacity="1" index="2" font="Arial" size="40" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="229" ypos="307.5" alignment="left" rotation="0" scalex="0.39292603731155396" scaley="0.39292603731155396" filter="true"><![CDATA[BLOGGER / ARTIST]]></item>
+  <item type="text" opacity="1" index="3" font="Arial" size="40" color="0@@@0@@@0@@@0@@@0" xpos="186.25" ypos="273.5" alignment="left" rotation="0" scalex="0.7102140188217163" scaley="0.7102140188217163" filter="true"><![CDATA[CHRIS]]></item>
+  <item type="text" opacity="1" index="4" font="FrnkGothITC Hv BT" size="40" color="0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="282.25" ypos="270.5" alignment="left" rotation="0" scalex="0.7399965524673462" scaley="0.7399965524673462" filter="true"><![CDATA[JOHNSON]]></item>
+  <item type="shape" opacity="1" index="5" shape_type="Circle" color="5377920 " xpos="52" ypos="319" width="64" height="64" rotation="0"/>
+  <item type="shape" opacity="1" index="6" shape_type="Circle" color="16447786 " xpos="-37" ypos="269" width="86" height="86" rotation="0"/>
+  <item type="shape" opacity="1" index="7" shape_type="Circle" color="396668 " xpos="76.25" ypos="321.25" width="27.9" height="27.9" rotation="-156.71047367795433"/>
+  <item type="shape" opacity="1" index="8" shape_type="Circle" color="5246581 " xpos="88" ypos="272" width="45" height="45" rotation="0"/>
+  <item type="shape" opacity="1" index="9" shape_type="Circle" color="5246581 " xpos="23" ypos="231.25" width="21.65" height="21.65" rotation="2.2502967669421414"/>
+  <item type="shape" opacity="1" index="10" shape_type="Circle" color="70817 " xpos="31.6" ypos="274.55" width="34" height="34" rotation="-58.39162897159963"/>
+  <item type="shape" opacity="1" index="11" shape_type="Circle" color="6430119 " xpos="92.75" ypos="283" width="18" height="18" rotation="-172.21798191863638"/>
+  <item type="shape" opacity="1" index="12" shape_type="Circle" color="16447786 " xpos="500" ypos="323" width="86" height="86" rotation="0"/>
+  <item type="shape" opacity="1" index="13" shape_type="Circle" color="5377920 " xpos="570" ypos="281" width="64" height="64" rotation="0"/>
+  <item type="shape" opacity="1" index="14" shape_type="Circle" color="70817 " xpos="528" ypos="282" width="34" height="34" rotation="0"/>
+  <item type="shape" opacity="1" index="15" shape_type="Circle" color="13941248 " xpos="493" ypos="300" width="30" height="30" rotation="0"/>
+  <item type="shape" opacity="1" index="16" shape_type="Circle" color="13933568 " xpos="612" ypos="237" width="46" height="46" rotation="0"/>
+  <item type="shape" opacity="1" index="17" shape_type="Circle" color="1574982 " xpos="565" ypos="275" width="12" height="12" rotation="0"/>
+  <item type="shape" opacity="1" index="18" shape_type="Circle" color="5849856 " xpos="571" ypos="242" width="34" height="34" rotation="0"/>
+  <item type="image" opacity="1" index="19" source="assets/graphics/Other Icons/46.png" xpos="140.5" ypos="281" width="38.95" height="37" rotation="0"/>
+  <item type="image" opacity="1" index="20" source="assets/graphics/Other Icons/46.png" xpos="434.5" ypos="281" width="38.95" height="37" rotation="0"/>
+  <item type="image" opacity="1" index="21" source="assets/graphics/Other Icons/live1.png" xpos="578.25" ypos="298.25" width="47.8" height="28.65" rotation="0.5030630420563178"/>
+</data>
