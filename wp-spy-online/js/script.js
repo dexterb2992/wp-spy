@@ -241,8 +241,9 @@ jQuery(document).ready(function(){
 										data : { q : 'get_wordpress_data', url : domain_raw },
 										dataType : 'json'
 									}).done(function (data){
+										console.log(data);
 										data_array["wordpress_data"] = JSON.stringify(data);
-
+										console.log(data_array["wordpress_data"]);
 										// update current progress
 											progress_current++;
 											check_progress(progress_limit, progress_current);
@@ -353,13 +354,16 @@ jQuery(document).ready(function(){
 								$("#country").html('<span class="flag flag-'+data.country_code+'"></span><span>'+data.country+'</span>');
 							
 							// wordpress data
+								console.log(data.wordpress_data);
 								var str_data = String(data.wordpress_data).replace(/\\/g, "");
 								
 								var wordpress_data = $.parseJSON(str_data);
+								// var wordpress_data = $.parseJSON(data.wordpress_data);
+
 
 								// wordpress version
-								$("div.plugins").html("");
-								console.log(wordpress_data);
+									$("div.plugins").html("");
+									console.log(wordpress_data);
 									
 									if( wordpress_data !== null && typeof(wordpress_data.version) != 'null' && wordpress_data.version != '0' ){
 										$("#wordpress_version").html(wordpress_data.version);
@@ -1831,10 +1835,14 @@ jQuery(document).ready(function(){
 					social_mention_attempts++;
 				}else{
 					social_mention_attempts = 0;
+					$(".social-metrics .title span").fadeOut(function (){ 
+						$(this).remove();
+						$('.social-metrics .content .entry .right span:first').html('<span class="red" style="margin-top: -9px;">Server too busy</span>'); 
+					});
+					$(".social-metrics .title").trigger('click');
 					return 0;
 					// x++;
 					// checkx(); // save to database
-
 				}
 			}else{
 				social_mention_attempts = 0;

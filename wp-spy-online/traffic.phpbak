@@ -2,12 +2,21 @@
 	<?php 
 		$page = 'wpspy-traffic';
 		include "_nav.php"; 
+		error_reporting(E_ALL);
+		ini_set('display_errors', 1);
 	?>
 	<div class="wpspy-content">
 		<div class="wpspy-form">
 			<?php 
-				if( isset( $_GET['url'] ) ){
+			echo "gwapo gihapon ko";
+			pre($_GET);
+			echo $_GET['url'];
+				if( isset($_GET['url']) ){
 					$site_metrics = get_site_metrics('http://'.$_GET['url']);
+					pre($site_metrics);
+					echo "gwapo ko";
+				}else{
+					echo "wtf!? gwapo japon ko";
 				}
 			?>
 			<iframe src="about:blank" id="remember" name="remember" class="hidden"></iframe>
@@ -51,16 +60,7 @@
 							</div>
 							<div class="right">
 								<span id="alexa_rank">
-									<?php 
-										echo isset($site_metrics["alexa_rank"]) ? $site_metrics["alexa_rank"] : "N/A"; 
-										if( isset($site_metrics["alexa_rank"]) ){
-											if($site_metrics["alexa_rank"] == 0){
-												echo '<a href="/seo-stats?url='.$_GET['url'].'" target="_blank">SEO Stats</a> page.';
-											}
-										}else{
-											echo "N/A";
-										}
-									?>
+									<?php echo isset($site_metrics["alexa_rank"]) ? $site_metrics["alexa_rank"] : "N/A"; ?>
 								</span>
 							</div>
 						</div>
@@ -109,20 +109,7 @@
 							</div>
 							<div class="right">
 								<span id="quantcast_traffic_rank">
-									<?php 
-										if(isset($site_metrics["quantcast_traffic_rank"])){
-											if($site_metrics["quantcast_traffic_rank"] == 0){
-												echo get_alexa_traffic_rank();
-											}else{
-												echo $site_metrics["quantcast_traffic_rank"];
-											}
-										}else{
-											echo "N/A";
-										}
-									?>
-									<?php
-										// echo isset($site_metrics["quantcast_traffic_rank"]) ? $site_metrics["quantcast_traffic_rank"] : "N/A"; 
-									?>
+									<?php echo isset($site_metrics["quantcast_traffic_rank"]) ? $site_metrics["quantcast_traffic_rank"] : "N/A"; ?>
 								</span>
 							</div>
 						</div>

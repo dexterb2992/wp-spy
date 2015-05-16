@@ -35,8 +35,8 @@ class functions
 
      }
      
-     #execute query and return ARRAY_A values
-     function fetch($sql,$isone=false)
+     #execute query and return ARRAY_A values 
+     function fetch($sql,$isone=false, $assoc=false)
      {
        $this->sql= $sql;
        $aResult = array();
@@ -44,8 +44,14 @@ class functions
        $pResult = mysql_query($sql,$this->links);
        if($pResult){
             if (mysql_num_rows($pResult) > 0) {
-                while ($aRow = mysql_fetch_assoc($pResult)) {
-                    $aResult[] = $aRow;
+                if( $assoc == true ){
+                    while ($aRow = mysql_fetch_assoc($pResult)) {
+                        $aResult[] = $aRow;
+                    }
+                }else{
+                    while ($aRow = mysql_fetch_array($pResult)) {
+                        $aResult[] = $aRow;
+                    }
                 }
             } else {
                 return false;
@@ -80,13 +86,7 @@ class functions
      #this is to prevent  XSS attack.
      function clean($string)
      {
-       $hack=array("<script","</script>","<style","</style>","<html","</html>","<head","<?","?>","<link","<body","<META",
-                    "<!DOCTYPE","</head>","<title>","</title>","javascript:");
-       $string = strip_tags($string); //remove any HTML code
-       $string=preg_replace("/(mysql_query|\"|from|select|insert|delete|where|drop table|show tables|#|\*|--|\\\\)/",
-                "", $string);
-       $string=addslashes(trim($string));
-       return $string;
+       return mysql_real_escape_string($string);
      }
      
      #Simple form to update a table values
@@ -99,16 +99,16 @@ class functions
          $c="";
          if(is_array($values) and is_array($condition))
          {
-             foreach($values as $k=>$v)
-             {
+            foreach($values as $k=>$v)
+            {
                  $f.=$k."='".$this->clean($v)."', ";
-             }
-             $f= substr($f,0,strlen($f)-2);
-             foreach($condition as $k=>$v)
-             {
+            }
+            $f= substr($f,0,strlen($f)-2);
+            foreach($condition as $k=>$v)
+            {
                 $c.=$k."='".$this->clean($v)."' and "; 
-             }
-             $c = substr($c,0,strlen($c)-4);
+            }
+            $c = substr($c,0,strlen($c)-4);
             $sql="update ".$table." set ".$f." where ".$c;
             $this->sql = $sql;
              if($this->query($sql))
@@ -132,11 +132,13 @@ class functions
          $f="";
          if(is_array($values))
          {
-             foreach($values as $k=>$v)
-             {
-                 $f.=$k."='".$this->clean($v)."', ";
-             }
-             $f= substr($f,0,strlen($f)-2);
+            if( $allow_html == false ){
+                foreach($values as $k=>$v)
+                {
+                    $f.=$k."='".$this->clean($v)."', ";
+                }
+                $f= substr($f,0,strlen($f)-2);
+            }
              
             $sql="insert into ".$table." set ".$f;
             $this->sql = $sql;

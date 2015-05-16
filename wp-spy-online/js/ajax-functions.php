@@ -249,8 +249,7 @@ function ajaxCheckDataStatus($option, $url){
  	$sql = "SELECT id FROM ".$table_name." WHERE (url='$url') AND 
  			(DATE_FORMAT(activity_date,'%Y-%m-%d') = DATE_FORMAT('$date_now', '%Y-%m-%d')) 
  			ORDER BY id DESC LIMIT 1";
- 	$res = $fn->fetch($sql, true);
-	pre($res);
+ 	$res = $fn->get_var($sql);
  	if( $res > 0 ){
  		$id = $res;
 
@@ -281,9 +280,8 @@ function ajaxCheckDataStatus($option, $url){
 
 		// get the details
 		$sql = "SELECT ".$columns." FROM ".$table_name." WHERE id = '".$id."'";
-
-		$results = $fn->fetch($sql, false);
-		echo json_encode($results);
+		$results = $fn->fetch($sql, true, true);
+		echo json_encode(array("0" => $results));
  	}else{
  		echo "false";
  	}

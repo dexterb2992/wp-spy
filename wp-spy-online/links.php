@@ -1,10 +1,7 @@
 <div class="wpspy-wrapper">
 	<?php 
 		$page = 'wpspy-links';
-		include "classes/config.php";
 		include "_nav.php"; 
-		include "classes/dbhelper.php";
-		include "classes/data.php";
 
 	?>
 	<div class="wpspy-content">
