@@ -141,7 +141,7 @@ function get_history_list($domain){
 
 	$sql = "SELECT id, DATE_FORMAT(activity_date,'%W, %M %e, %Y @ %h:%i %p') as formatted_activity_date,
 	 		activity_date FROM ".$table_name." WHERE url = '".$domain."' ORDER BY id DESC";
-	$res = $fn->fetch( $sql, ARRAY_A );
+	$res = $fn->fetch( $sql, false );
 	
 	$records = array();
 
@@ -201,7 +201,7 @@ function query_history_sql($id, $columns){
 	$table_name = $GLOBALS['CFG']['Database']['prefix'].'wpspy_activity_log';
 
 	$sql = "SELECT ".$columns." FROM ".$table_name." WHERE id = '".$id."'";
-	$res = $fn->fetch( $sql, ARRAY_A );
+	$res = $fn->fetch( $sql, false );
 
 	if( $res ){
 		return $res;
