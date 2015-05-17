@@ -12,8 +12,10 @@
 
 	global $fn;
 	global $wpdb;
-	$wpdb->prefix = "wp_";
+	$wpdb->prefix = $GLOBALS['CFG']['Database']['prefix'];
 	$fn = new functions();
+
+	$fn->connect();
 ?>
 <div class="wpspy-head">
 	<div class="logo">

@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include "../classes/config.php";
+include "../classes/config.php"; 
 include "../classes/functions.php";
 include "../classes/data.php";
 include "../classes/dbhelper.php";

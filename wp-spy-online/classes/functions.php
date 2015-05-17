@@ -10,11 +10,14 @@ class functions
      #build a connection to our database server.
      function connect()
      {
-        global $CFG;
-        $this->links=mysql_connect($CFG["Database"]["host"],$CFG["Database"]["username"],$CFG["Database"]["password"]) 
-            or die("Cannot connect to server. Please check your configurations.".mysql_error());
-                mysql_select_db($CFG["Database"]["databasename"],$this->links) 
-            or  die("Cannot connect to database server. Please check your configurations.");
+
+        $url = "http://".$_SERVER["HTTP_HOST"].dirname($_SERVER["REQUEST_URI"])."/setup.php";
+
+        $this->links=mysql_connect($GLOBALS['CFG']["Database"]["host"],
+            $GLOBALS['CFG']["Database"]["username"], $GLOBALS['CFG']["Database"]["password"])
+            or windowLocation($url);
+                mysql_select_db($GLOBALS['CFG']["Database"]["databasename"],$this->links) 
+            or windowLocation($url);
      }
     // function connect(){
     //     global $CFG;

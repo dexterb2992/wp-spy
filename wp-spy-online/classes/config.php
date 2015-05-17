@@ -5,7 +5,7 @@ define('BASE_URL',   dirname( dirname(__FILE__) )."/" );
 
 # Get the name of the current folder
 preg_match('~/(.*?)/~', $_SERVER['SCRIPT_NAME'], $output);
-define('FOLDER_NAME', '/'.$output[1].'/');	
+define('FOLDER_NAME', $output[1].'/');	
 
 #Do not forget to add trailing slash at the end.
 define('ABS_PATH', dirname( dirname(__FILE__) ).'/wp-spy_/' );
@@ -19,15 +19,28 @@ define('APP_FOLDER', ABS_PATH.'app/');
 define('CLASS_FOLDER', APP_FOLDER.'classes/');
 
 #Database settings
-$GLOBALS['CFG']=array(
-					
+$config = json_decode(@file_get_contents("db-config.dex"));
+
+if(!empty($config)){
+	$GLOBALS['CFG'] = array(
+		'Database' => array(
+			"host" => $config->Database->host,
+			"databasename" => $config->Database->databasename,
+			"username" => $config->Database->username,
+			"password" => $config->Database->password,
+			"prefix" => $config->Database->prefix
+		)
+	);
+}else{
+	$GLOBALS['CFG'] = array(
 	'Database' => array(
-		'host'=>'localhost',
-		'databasename' =>'dexterb',
-		'username' =>'root',
-		'password' =>'',
-		'prefix' => 'wp_'
+		"host" => "",
+		"databasename" => "",
+		"username" => "",
+		"password" => "",
+		"prefix" => ""
 	)
 );
+}
 
 
