@@ -92,6 +92,7 @@ jQuery(document).ready(function(){
 		});
 
 		$("#form_wpspy").submit(function(e){
+			$('.error').remove();
 			var domain = $("#wpspy_url").val(), page = $("#wpspy_submit").data("page"), btn = $("#wpspy_submit"),
 				progress_limit = 0, progress_current = 0;
 			disable_button(btn, "Please wait..");
@@ -320,7 +321,7 @@ jQuery(document).ready(function(){
 										}
 									}).fail(function (data){
 										console.log("error:");
-										console.log(data.responseText);
+										console.log(data);
 										// here we enable the submit button again
 											enable_button(btn, "Go");
 
@@ -816,7 +817,7 @@ jQuery(document).ready(function(){
 						dataType : 'json'
 					}).done(function (data){
 						console.log( typeof(data) );
-						
+						console.log(data);
 
 						if( data !== false && data[0].alexa_rank == 0 ){
 							data = false;
@@ -880,7 +881,11 @@ jQuery(document).ready(function(){
 									progress_current++;
 									check_progress_and_save(progress_limit, progress_current, data_array);
 								}).fail(function (data){
+									progress_current++;
 									console.log(data);
+									fetching_failure($('.backlinks'), 'Backlinks Data');
+									$('.pages-indexed .title span').fadeOut(function(){ $(this).remove(); });
+									$('.pages-indexed .title').trigger('click');
 								});
 
 							/* let's get all the pages indexed data */
@@ -903,8 +908,10 @@ jQuery(document).ready(function(){
 									check_progress_and_save(progress_limit, progress_current, data_array);
 								}).fail(function (data){
 									console.log(data);
+									progress_current++;
 									$('.pages-indexed .title span').fadeOut(function(){ $(this).remove(); });
 									$('.pages-indexed .title').trigger('click');
+									fetching_failure($('.pages-indexed'), 'Pages indexed Data');
 								});
 
 							/* let's get the alexa rank in country */
@@ -1951,7 +1958,7 @@ jQuery(document).ready(function(){
 		}
 
 		function fetching_failure(div, title){
-			div.append('<div class="erro red">'+title+' failed to load. Please try again.</div>');
+			div.append('<div class="error red">'+title+' failed to load. Please try again.</div>');
 		}
 
 		function is_numeric(mixed_var) {

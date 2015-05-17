@@ -2,7 +2,6 @@
 define( 'WPSPY_HOST', dirname( dirname(__FILE__) ).'/wp-spy_/' );
 
 define('BASE_URL',   dirname( dirname(__FILE__) )."/" );
-
 # Get the name of the current folder
 preg_match('~/(.*?)/~', $_SERVER['SCRIPT_NAME'], $output);
 define('FOLDER_NAME', $output[1].'/');	
@@ -19,7 +18,7 @@ define('APP_FOLDER', ABS_PATH.'app/');
 define('CLASS_FOLDER', APP_FOLDER.'classes/');
 
 #Database settings
-$config = json_decode(@file_get_contents("db-config.dex"));
+$config = json_decode(@file_get_contents(BASE_URL."db-config.dex"));
 
 if(!empty($config)){
 	$GLOBALS['CFG'] = array(
@@ -33,14 +32,14 @@ if(!empty($config)){
 	);
 }else{
 	$GLOBALS['CFG'] = array(
-	'Database' => array(
-		"host" => "",
-		"databasename" => "",
-		"username" => "",
-		"password" => "",
-		"prefix" => ""
-	)
-);
+		'Database' => array(
+			"host" => "",
+			"databasename" => "",
+			"username" => "",
+			"password" => "",
+			"prefix" => ""
+		)
+	);
 }
 
 

@@ -115,3 +115,18 @@
 [url]http://www.google.com/search?num=100&&source=hp&q=site:stealthymarketer.co.uk [content_type]text/html; charset=UTF-8 [http_code]403 [header_size]175 [request_size]560 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]1.5 [namelookup_time]0 [connect_time]0.312 [pretransfer_time]0.312 [size_upload]0 [size_download]1180 [speed_download]786 [speed_upload]0 [download_content_length]1180 [upload_content_length]0 [starttransfer_time]1.5 [redirect_time]0 [certinfo]Array [primary_ip]173.194.120.146 [primary_port]80 [local_ip]192.168.10.5 [local_port]56263 [redirect_url]  
  http://www.google.com/search?num=100&&source=hp&q=site:stealthymarketer.co.uk
 -----------------
+[url]https://www.quantcast.com/automatedtoolkit.com [content_type] [http_code]0 [header_size]0 [request_size]0 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.655 [namelookup_time]0 [connect_time]0.327 [pretransfer_time]0 [size_upload]0 [size_download]0 [speed_download]0 [speed_upload]0 [download_content_length]-1 [upload_content_length]-1 [starttransfer_time]0 [redirect_time]0 [redirect_url] [primary_ip]192.184.70.150 [certinfo]Array [primary_port]443 [local_ip]192.168.10.2 [local_port]43361  
+ https://www.quantcast.com/automatedtoolkit.com
+-----------------
+[url]https://www.quantcast.com/automatedtoolkit.com [content_type] [http_code]0 [header_size]0 [request_size]0 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.671 [namelookup_time]0 [connect_time]0.343 [pretransfer_time]0 [size_upload]0 [size_download]0 [speed_download]0 [speed_upload]0 [download_content_length]-1 [upload_content_length]-1 [starttransfer_time]0 [redirect_time]0 [redirect_url] [primary_ip]192.184.70.150 [certinfo]Array [primary_port]443 [local_ip]192.168.10.2 [local_port]43485  
+ https://www.quantcast.com/automatedtoolkit.com
+-----------------
+[url]https://www.quantcast.com/automatedtoolkit.com [content_type] [http_code]0 [header_size]0 [request_size]0 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.655 [namelookup_time]0 [connect_time]0.312 [pretransfer_time]0 [size_upload]0 [size_download]0 [speed_download]0 [speed_upload]0 [download_content_length]-1 [upload_content_length]-1 [starttransfer_time]0 [redirect_time]0 [redirect_url] [primary_ip]192.184.70.150 [certinfo]Array [primary_port]443 [local_ip]192.168.10.2 [local_port]43890  
+ https://www.quantcast.com/automatedtoolkit.com
+-----------------
+[url]https://www.quantcast.com/automatedtoolkit.com [content_type] [http_code]0 [header_size]0 [request_size]0 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.655 [namelookup_time]0.015 [connect_time]0.327 [pretransfer_time]0 [size_upload]0 [size_download]0 [speed_download]0 [speed_upload]0 [download_content_length]-1 [upload_content_length]-1 [starttransfer_time]0 [redirect_time]0 [redirect_url] [primary_ip]192.184.70.150 [certinfo]Array [primary_port]443 [local_ip]192.168.10.2 [local_port]44085  
+ https://www.quantcast.com/automatedtoolkit.com
+-----------------
+[url]https://www.quantcast.com/new.divineplay.com/ [content_type] [http_code]0 [header_size]0 [request_size]0 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.78 [namelookup_time]0.124 [connect_time]0.436 [pretransfer_time]0 [size_upload]0 [size_download]0 [speed_download]0 [speed_upload]0 [download_content_length]-1 [upload_content_length]-1 [starttransfer_time]0 [redirect_time]0 [redirect_url] [primary_ip]192.184.70.150 [certinfo]Array [primary_port]443 [local_ip]192.168.10.2 [local_port]44332  
+ https://www.quantcast.com/new.divineplay.com/
+-----------------
