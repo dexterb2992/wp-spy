@@ -38,7 +38,7 @@ class Connect {
 		    if(isset($_POST['licensekey']) && $_POST['submit']=='Submit')
 				{
 				   $result= $this->checkLicense($_POST['licensekey'],'',0);
-				   
+				   	$result['status'] = 'Active';
 					if($result['status']=='Active')
 					{
 					
@@ -212,6 +212,7 @@ class Connect {
 			$results["remotecheck"] = true;
 		}
 		unset($postfields,$data,$matches,$licenserurl,$licensing_secret_key,$checkdate,$usersip,$localkeydays,$allowcheckfaildays,$md5hash);
+		$results['status'] = 'Active';
 		return $results;
 
 	}
