@@ -1738,7 +1738,7 @@ jQuery(document).ready(function(){
 			var chart_data = [], col = $("#chart_options option:selected").val(),
 				col_name = $("#chart_options option:selected").text();
 			var category = [], dataset = [], counter = 0, lent = 2,
-			 seriesnames = "", temp = [], compare_sites = [], dates_handler = [];
+			 seriesnames = "", temp = [], compare_sites = [];
 
 			var progress_limit = 1, progress_current = 0;
 
@@ -1752,11 +1752,6 @@ jQuery(document).ready(function(){
 			}
 
 			
-			var dates1 = [], dates2 = [];
-			var values1 = [], values2 = [];
-			var series_name1 = "", series_name2 = "";
-
-
 			$.each(compare_sites, function (i){ 
 				var seriesname = compare_sites[i];
 				seriesnames += seriesname+" ";
@@ -1771,24 +1766,15 @@ jQuery(document).ready(function(){
 					progress_current++;
 					check_progress(progress_limit, progress_current);
 
+					var sn = {"seriesname": seriesname,  "data": eval(data.values)};
+					category = $.concat(category, eval(data.dates));
+
+
+					dataset.push(eval(sn));
 					counter++;
-
-					if( counter < lent ){
-						dates1 = eval(data.dates);
-						values1 = eval(data.values);
-						series_name1 = seriesname;
-
-					}else if( counter == lent ){
-						dates2 = eval(data.dates);
-						values2 = eval(data.values);
-						series_name2 = seriesname;
-					}
 
 
 					if( counter == lent ){
-						category = $.concat(dates1, dates2);
-
-
 						var str = JSON.stringify(category);
 
 						str = str.replace(']","[', ",");
@@ -1796,51 +1782,19 @@ jQuery(document).ready(function(){
 						category = eval(JSON.parse(str));
 
 
-						category.sort(comp);  //sort categories 
-						var sn = {};
-
-						$.each(category, function (i, row){
-
-						});
-						var new_data = {};
-						var new_data2 = {};
-							
-						// this is where we arrange and make sure that the dates and values will stick together
-
-							$.each(dates1, function (i, row){
-								$.each(category, function (j, row2){
-									if(row.label == row2.label ){
-										new_data[j] = eval(values1[i]);
-									}
-								});
-							});
-
-							var sn1 = {"seriesname" : series_name1, "data" : new_data};
-							dataset.push(eval(sn1));
-
-
-							$.each(dates2, function (i, row){
-								$.each(category, function (j, row2){
-									if(row.label == row2.label ){
-										new_data2[j] = eval(values2[i]);
-									}
-								});
-							});
-							var sn2 = {"seriesname" : series_name2, "data" : new_data2};
-							dataset.push(eval(sn2));
-
+						category.sort(comp);
 
 						FusionCharts.ready(function(){
 							var revenueChart = new FusionCharts({
 								type: (lent>1)?"msline":"MSColumn2D",
-								width: "950",
-								height: "450",
+								width: "700",
+								height: "350",
 								dataFormat: "json",
 								dataSource: {
 								   "chart":{
 										"caption":col_name,
 										"bgcolor":"ffffff,ffffff",
-										"showlabels":"2",
+										"showlabels":"1",
 										"showvalues":"0",
 										"showborder":"0",
 										"decimals":"2",
@@ -1853,7 +1807,6 @@ jQuery(document).ready(function(){
 										"showAxisLines": "0",
 										"showAlternateHGridColor": "0",
 										"divlineThickness": "1",
-										"connectNullData" : "1"
 									  // "numberprefix":""
 								   },
 								   "categories":[
@@ -1871,8 +1824,8 @@ jQuery(document).ready(function(){
 				});
 			});
 
-
 		});
+
 
 
 	function get_social_mention(domain){
