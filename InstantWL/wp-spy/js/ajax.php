@@ -5,6 +5,7 @@ include "../classes/functions.php";
 include "../classes/data.php";
 include "../classes/dbhelper.php";
 
+include "ajax-functions.php";
 
 $q = $_POST['q'];
 
@@ -18,7 +19,6 @@ $fn = new functions();
 
 $fn->connect();
 
-include "ajax-functions.php";
 
 $wpdb->prefix = "wp_";
 $table_name = $wpdb->prefix.'wpspy_activity_log';
@@ -107,7 +107,7 @@ if( $q == "save_activity" ){
 }else if( $q == "update_rtl_settings" ){
 	
 	if( isset($_POST['val']) ){
-		saveRTLSettings($_POST['val']);
+		echo saveRTLSettings($_POST['val']);
 	}
 
 }else if ( $q == "get_rtlimit" ){

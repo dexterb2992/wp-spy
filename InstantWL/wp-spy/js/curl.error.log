@@ -130,3 +130,18 @@
 [url]https://www.quantcast.com/new.divineplay.com/ [content_type] [http_code]0 [header_size]0 [request_size]0 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.78 [namelookup_time]0.124 [connect_time]0.436 [pretransfer_time]0 [size_upload]0 [size_download]0 [speed_download]0 [speed_upload]0 [download_content_length]-1 [upload_content_length]-1 [starttransfer_time]0 [redirect_time]0 [redirect_url] [primary_ip]192.184.70.150 [certinfo]Array [primary_port]443 [local_ip]192.168.10.2 [local_port]44332  
  https://www.quantcast.com/new.divineplay.com/
 -----------------
+[url]https://www.quantcast.com/new.divineplay.com/ [content_type] [http_code]0 [header_size]0 [request_size]0 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.765 [namelookup_time]0.125 [connect_time]0.437 [pretransfer_time]0 [size_upload]0 [size_download]0 [speed_download]0 [speed_upload]0 [download_content_length]-1 [upload_content_length]-1 [starttransfer_time]0 [redirect_time]0 [redirect_url] [primary_ip]192.184.70.150 [certinfo]Array [primary_port]443 [local_ip]192.168.10.2 [local_port]37948  
+ https://www.quantcast.com/new.divineplay.com/
+-----------------
+[url]http://www.google.com/search?num=100&&source=hp&q=site:new.divineplay.com/ [content_type]text/html; charset=UTF-8 [http_code]403 [header_size]175 [request_size]554 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]1.513 [namelookup_time]0 [connect_time]0.405 [pretransfer_time]0.405 [size_upload]0 [size_download]1180 [speed_download]779 [speed_upload]0 [download_content_length]1180 [upload_content_length]0 [starttransfer_time]1.513 [redirect_time]0 [redirect_url] [primary_ip]173.194.126.52 [certinfo]Array [primary_port]80 [local_ip]192.168.10.2 [local_port]37987  
+ http://www.google.com/search?num=100&&source=hp&q=site:new.divineplay.com/
+-----------------
+[url]https://www.quantcast.com/stealthymarketer.co.uk [content_type] [http_code]0 [header_size]0 [request_size]0 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.64 [namelookup_time]0 [connect_time]0.312 [pretransfer_time]0 [size_upload]0 [size_download]0 [speed_download]0 [speed_upload]0 [download_content_length]-1 [upload_content_length]-1 [starttransfer_time]0 [redirect_time]0 [redirect_url] [primary_ip]192.184.70.150 [certinfo]Array [primary_port]443 [local_ip]192.168.10.2 [local_port]38151  
+ https://www.quantcast.com/stealthymarketer.co.uk
+-----------------
+[url]https://www.quantcast.com/automatedtoolkit.com [content_type] [http_code]0 [header_size]0 [request_size]0 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.889 [namelookup_time]0.265 [connect_time]0.562 [pretransfer_time]0 [size_upload]0 [size_download]0 [speed_download]0 [speed_upload]0 [download_content_length]-1 [upload_content_length]-1 [starttransfer_time]0 [redirect_time]0 [redirect_url] [primary_ip]192.184.70.150 [certinfo]Array [primary_port]443 [local_ip]192.168.10.2 [local_port]38767  
+ https://www.quantcast.com/automatedtoolkit.com
+-----------------
+[url]https://www.youtube.com/watch?v=PzRlL9ksoWI [content_type] [http_code]0 [header_size]0 [request_size]0 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.78 [namelookup_time]0.125 [connect_time]0.452 [pretransfer_time]0 [size_upload]0 [size_download]0 [speed_download]0 [speed_upload]0 [download_content_length]-1 [upload_content_length]-1 [starttransfer_time]0 [redirect_time]0 [redirect_url] [primary_ip]216.58.196.46 [certinfo]Array [primary_port]443 [local_ip]192.168.10.2 [local_port]40514  
+ https://www.youtube.com/watch?v=PzRlL9ksoWI
+-----------------

@@ -157,6 +157,12 @@
 					PRIMARY KEY (id)
 				)";
 
+				$sql2 = "CREATE TABLE ".$prefix."wpspy_activity_settings (
+					id bigint(20) unsigned NOT NULL auto_increment,
+					recommended_tools_limit int NOT NULL default '10',
+					PRIMARY KEY (id)
+				)";
+
 				$arr = array(
 					'Database' => array(
 						'host'=>$host,
@@ -182,7 +188,11 @@
 
 						@mysql_query("DROP TABLE IF EXISTS ".$prefix."wpspy_activity_log;");
 						$res = @mysql_query($sql);
-						if($res){
+						@mysql_query("DROP TABLE IF EXISTS ".$prefix."wpspy_activity_settings;");
+						$res2 = @mysql_query($sql2);
+
+						if($res && $res2){
+							@mysql_query("INSERT INTO ".$prefix."wpspy_activity_settings VALUES('', '10')");
 							header("Location: site-info.php");
 						}else{
 							echo "Oh, wait! We got a problem. ".mysql_error();

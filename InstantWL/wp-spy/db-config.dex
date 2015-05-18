@@ -1,1 +1,1 @@
-{"Database":{"host":"localhost","databasename":"test","username":"root","password":"","prefix":"wp_"}}
+{"Database":{"host":"localhost","databasename":"wp_test","username":"root","password":"","prefix":"wp_"}}

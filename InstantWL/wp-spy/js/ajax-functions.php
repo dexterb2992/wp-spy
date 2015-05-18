@@ -27,7 +27,7 @@ function store_activity($url, $wpspy_activity) {
 	        if( $fn->update( $table_name, $wpspy_activity, $where ) ){
 	        	echo json_encode(array("status_code"=>"200", "msg" => "Success!"));
 	        }else{
-		    	echo json_encode(array("status_code"=>"500", "msg" => "Sorry, something went wrong. Please try again later.", "error" =>  $wpdb->print_error(), "more_info" => $wpdb->last_query));
+		    	echo json_encode(array("status_code"=>"500", "msg" => "Sorry, something went wrong. Please try again later.", "error" =>  $fn->get_mysql_error(), "more_info" => $fn->get_sql()));
 	        }
    	}else{
    		// Insert new record
@@ -36,7 +36,7 @@ function store_activity($url, $wpspy_activity) {
 		    if( $fn->insert( $table_name, $wpspy_activity ) ){
 		    	echo json_encode(array("status_code"=>"200", "msg" => "Success!"));
 		    }else{
-		    	echo json_encode(array("status_code"=>"500", "msg" => "Sorry, something went wrong. Please try again later.", "error" =>  $wpdb->print_error(), "more_info" => $wpdb->last_query));
+		    	echo json_encode(array("status_code"=>"500", "msg" => "Sorry, something went wrong. Please try again later.", "error" =>  $fn->get_mysql_error(), "more_info" => $fn->get_sql()));
 		    }
    	}
 }
@@ -206,7 +206,7 @@ function query_history_sql($id, $columns){
 	if( $res ){
 		return $res;
 	}
-	return $wpdb->last_query;
+	return $fn->get_sql();
 }
 
 // save recommended tools limit settings
@@ -215,15 +215,15 @@ function saveRTLSettings($val){
 	global $fn;
 	$table_name = $GLOBALS['CFG']['Database']['prefix'].'wpspy_activity_settings';
 
-	$sql = "SELECT * FROM ".$table_name." ORDER BY id DESC LIMIT 1";
-	$res = $fn->get_row( $sql );
+	$sql = "SELECT recommended_tools_limit FROM ".$table_name;
+	$res = $fn->get_var( $sql, true, true );
 	pre($res);
 	if( !empty($res) ){
 		$sql = $fn->update( $table_name, array('recommended_tools_limit' => $val), array("id" => $res->id) );
 	}else{
 		$fn->insert($table_name, array('recommended_tools_limit' => $val));
 	}
-	return $fn->last_query;
+	return $fn->get_sql();
 }
 
 function getRTLimit(){
@@ -232,7 +232,8 @@ function getRTLimit(){
 	$table_name = $GLOBALS['CFG']['Database']['prefix'].'wpspy_activity_settings';
 
 	$sql = "SELECT recommended_tools_limit FROM $table_name ORDER BY id DESC LIMIT 1";
-	$res = $fn->get_row($sql);
+	$res = $fn->get_var($sql);
+	pre($res);
 	if( !empty($res) && isset($res->recommended_tools_limit) ){
 		return $res->recommended_tools_limit;
 	}

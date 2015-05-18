@@ -170,7 +170,13 @@
 						</div>
 					</div>
 				</div>
-
+				<div id="settings_dialog" class="hidden" title="Recommended tools limit">
+					<iframe src="about:blank" class="hidden" id="remember" name="remember"></iframe>
+					<form id="rtl_settings" method="post" action="" target="remember">
+						<input type="text" data-type="number" required="required" id="settings" value="<?php echo ( $tmp < 1) ? 10 : $tmp;?>" placeholder="Set limit">
+						<button type="submit" name="save_settings" id="save_settings" class="wpspy_btn">Save</button>
+					</form>
+				</div>
 				<div class="box recommended-tools">
 					<div class="title">Recommended tools<span class="pull-right settings" id="recommended_tools_settings">Setting</span></div>
 					<div class="content">
@@ -200,13 +206,6 @@
 							}
 						?>
 					</div>
-				</div>
-				<div id="settings_dialog" class="hidden" title="Recommended tools limit">
-					<iframe src="about:blank" class="hidden" id="remember" name="remember"></iframe>
-					<form id="rtl_settings" method="post" action="" target="remember">
-						<input type="text" data-type="number" required="required" id="settings" value="<?php echo ( $tmp < 1) ? 10 : $tmp;?>" placeholder="Set limit">
-						<button type="submit" name="save_settings" id="save_settings" class="wpspy_btn">Save</button>
-					</form>
 				</div>
 			</div>
 		</div>

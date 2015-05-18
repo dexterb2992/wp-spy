@@ -50,13 +50,13 @@ jQuery(document).ready(function(){
 
 	// recommended tools limit
 		var recommended_tools_limit = 0;
-		// $.ajax({
-		// 	url : wpspy_ajaxurl,
-		// 	type: 'post',
-		// 	data : { q : 'get_rtlimit' }
-		// }).done(function (data){
-		// 	recommended_tools_limit = data;
-		// });
+		$.ajax({
+			url : wpspy_ajaxurl,
+			type: 'post',
+			data : { q : 'get_rtlimit' }
+		}).done(function (data){
+			recommended_tools_limit = data;
+		});
 
 	var x = 1 ;
 	/** Initialize our datatables here */
