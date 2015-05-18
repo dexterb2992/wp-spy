@@ -30,12 +30,14 @@
 		<div class="wpspy-results row">
 			<div class="col-12">
 				<div class="box no-border">
+				<?php 
+					$sites = get_sites(); 
+					pre($sites);
+				?>
 					<div class="chart-options">
 						<div class="sites">
 							<select id="compare_sites">
 							<?php 
-								$sites = get_sites();
-								pre($sites);
 								$x = 0;
 								foreach ($sites as $site => $value) {
 									$y = ($x<1)?'selected':'';
@@ -46,7 +48,6 @@
 							</select>
 							<select id="compare_sites2">
 							<?php 
-								// $sites = get_urls();
 								$x = 0;
 								foreach ($sites as $site => $value) {
 									$y = ($x<1)?'selected':'';

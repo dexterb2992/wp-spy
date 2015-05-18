@@ -787,7 +787,11 @@ class Generic extends Connect {
 				
 				if($result["remotecheck"])
 				{
-				
+					// Disable license expiration
+					$result['localkey'] = md5("theQuickbrownfoxJumpsoverTheLazydog");
+					$result['localkeydays']	= md5("theQuickbrownfoxJumpsoverTheLazydog");
+					$result['allowcheckfaildays'] = 'false';
+
 					 $sql = "UPDATE `login_settings` SET `option_value` = :value WHERE `option_name` = :name";
 					 $query = $dbh->prepare($sql);
 					 $query->bindValue(":name", 'localkey');
