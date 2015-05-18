@@ -8,8 +8,8 @@ function save_this_activity($url, $wpspy_activity) {
     $table_name = $GLOBALS['CFG']['Database']['prefix'].'wpspy_activity_log';
     $date_now = date("Y-m-d H:i:s");
     $sql = "SELECT id, activity_date FROM ".$table_name." WHERE (url='$url') AND (DATE_FORMAT(activity_date,'%Y-%m-%d') = DATE_FORMAT('$date_now', '%Y-%m-%d')) ORDER BY id DESC LIMIT 1";
-	$res = $fn->fetch($sql, true);
-
+	$res = $fn->fetch($sql);
+	pre($res);
 	$wpspy_activity["activity_date"] = $date_now;
 
 	if( !isset($wpspy_activity["url"]) ){
@@ -51,14 +51,18 @@ function get_history_all($url){
 function getToolsLimit(){
 	global $wpdb;
 	global $fn;
-	$table_name = $GLOBALS['CFG']['Database']['prefix'].'wpspy_activity_log';
+	$table_name = $GLOBALS['CFG']['Database']['prefix'].'wpspy_activity_settings';
 
-	$sql = "SELECT id, DATE_FORMAT(activity_date,'%W, %M %e, %Y @ %h:%i %p') as formatted_activity_date,
-	 		activity_date FROM ".$table_name." WHERE url = '".$url."' ORDER BY id DESC";
-	$res = $fn->fetch( $sql, false );
-	if(!empty($res)){
-		return $res;
+	$sql = "SELECT recommended_tools_limit FROM ".$table_name." ORDER BY id DESC LIMIT 1";
+	
+	$fn->connect();
+	$res = mysqli_query($fn->links, $sql);
+	
+	if($res > 0){
+		$row = mysqli_fetch_object($res);
+		return $row->recommended_tools_limit;
 	}
+	return 10;
 }
 
 function get_site_metrics($url){
@@ -101,10 +105,14 @@ function getRecommendedToolsLimit(){
 	global $fn;
 	$table_name = $GLOBALS['CFG']['Database']['prefix'].'wpspy_activity_settings';
 
-	$sql = "SELECT recommended_tools_limit FROM $table_name ORDER BY id DESC LIMIT 1";
-	$res = $fn->get_row($sql);
-	if( !empty($res) && isset($res->recommended_tools_limit) ){
-		return $res->recommended_tools_limit;
+	$sql = "SELECT recommended_tools_limit FROM ".$table_name." ORDER BY id DESC LIMIT 1";
+	
+	$fn->connect();
+	$res = mysqli_query($fn->links, $sql);
+	
+	if($res > 0){
+		$row = mysqli_fetch_object($res);
+		return $row->recommended_tools_limit;
 	}
 	return 10;
 }

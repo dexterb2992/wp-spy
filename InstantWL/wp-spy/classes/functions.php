@@ -13,30 +13,16 @@ class functions
 
         $url = "http://".$_SERVER["HTTP_HOST"].dirname($_SERVER["REQUEST_URI"])."/setup.php";
 
-        // $this->links=mysql_connect($GLOBALS['CFG']["Database"]["host"],
-        //     $GLOBALS['CFG']["Database"]["username"], $GLOBALS['CFG']["Database"]["password"])
-        //     or windowLocation($url);
-        //         mysql_select_db($GLOBALS['CFG']["Database"]["databasename"],$this->links) 
-        //     or windowLocation($url);
-
             // Create connection
            $this->links = new mysqli($GLOBALS['CFG']["Database"]["host"], $GLOBALS['CFG']["Database"]["username"], $GLOBALS['CFG']["Database"]["password"]);
 
             // Check connection
             if ($this->links->connect_error) {
-                // die("Connection failed: " . $conn->connect_error);
                 windowLocation($url);
             }
             mysqli_select_db($this->links, $GLOBALS['CFG']["Database"]["databasename"]) or windowLocation($url);
             // echo "Connected successfully";
      }
-    // function connect(){
-    //     global $CFG;
-    //     mysql_connect($CFG["Database"]["host"], $CFG["Database"]["username"], $CFG["Database"]["password"])
-    //         or  die("Cannot connect to server. Please check your configurations.".mysql_error());
-    //     mysql_select_db($CFG["Database"]["databasename"])  or
-    //         die("Cannot connect to database server. Please check your configurations.");
-    // }
     
      #Execute query to database
      function query($sql)
@@ -58,14 +44,8 @@ class functions
        $pResult = mysqli_query($this->links, $sql);
        if($pResult){
             if (mysqli_num_rows($pResult) > 0) {
-                if( $assoc == true ){
-                    while ($aRow = mysql_fetch_assoc($pResult)) {
-                        $aResult[] = $aRow;
-                    }
-                }else{
-                    while ($aRow = mysql_fetch_array($pResult)) {
-                        $aResult[] = $aRow;
-                    }
+                while ($aRow = @mysqli_fetch_assoc($pResult)) {
+                    $aResult[] = $aRow;
                 }
             } else {
                 return false;

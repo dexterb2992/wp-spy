@@ -20,6 +20,8 @@ function store_activity($url, $wpspy_activity) {
     $sql = "SELECT id, activity_date FROM ".$table_name." WHERE (url='$url') AND (DATE_FORMAT(activity_date,'%Y-%m-%d') = DATE_FORMAT('$date_now', '%Y-%m-%d')) ORDER BY id DESC LIMIT 1";
 	$res = $fn->fetch($sql);
 
+	
+
    	if( $res != 0 && !empty($res) ){
    		// Update old record in the same day
    			$wpspy_activity["activity_date"] = $date_now;
@@ -215,14 +217,20 @@ function saveRTLSettings($val){
 	global $fn;
 	$table_name = $GLOBALS['CFG']['Database']['prefix'].'wpspy_activity_settings';
 
-	$sql = "SELECT recommended_tools_limit FROM ".$table_name;
-	$res = $fn->get_var( $sql, true, true );
-	pre($res);
-	if( !empty($res) ){
-		$sql = $fn->update( $table_name, array('recommended_tools_limit' => $val), array("id" => $res->id) );
-	}else{
-		$fn->insert($table_name, array('recommended_tools_limit' => $val));
+	$sql = "SELECT * FROM ".$table_name." ORDER BY id DESC LIMIT 1";
+
+	$fn->connect();
+	$res = mysqli_query($fn->links, $sql);
+
+	if($res > 0){
+		$row = mysqli_fetch_object($res);
+		if( $row->id > 0 ){
+			$sql = $fn->update( $table_name, array('recommended_tools_limit' => $val), array("id" => $row->id) );
+		}else{
+			$fn->insert($table_name, array('recommended_tools_limit' => $val));
+		}
 	}
+	
 	return $fn->get_sql();
 }
 
@@ -231,11 +239,14 @@ function getRTLimit(){
 	global $fn;
 	$table_name = $GLOBALS['CFG']['Database']['prefix'].'wpspy_activity_settings';
 
-	$sql = "SELECT recommended_tools_limit FROM $table_name ORDER BY id DESC LIMIT 1";
-	$res = $fn->get_var($sql);
-	pre($res);
-	if( !empty($res) && isset($res->recommended_tools_limit) ){
-		return $res->recommended_tools_limit;
+	$sql = "SELECT recommended_tools_limit FROM ".$table_name." ORDER BY id DESC LIMIT 1";
+	
+	$fn->connect();
+	$res = mysqli_query($fn->links, $sql);
+	
+	if($res > 0){
+		$row = mysqli_fetch_object($res);
+		return $row->recommended_tools_limit;
 	}
 	return 10;
 }

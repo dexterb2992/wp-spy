@@ -170,6 +170,10 @@
 						</div>
 					</div>
 				</div>
+				<?php 
+					// TEMPORARY LIMIT 10
+						$tmp = getRecommendedToolsLimit();
+				?>
 				<div id="settings_dialog" class="hidden" title="Recommended tools limit">
 					<iframe src="about:blank" class="hidden" id="remember" name="remember"></iframe>
 					<form id="rtl_settings" method="post" action="" target="remember">
@@ -181,8 +185,7 @@
 					<div class="title">Recommended tools<span class="pull-right settings" id="recommended_tools_settings">Setting</span></div>
 					<div class="content">
 						<?php 
-						// TEMPORARY LIMIT 10
-						$tmp = getRecommendedToolsLimit();
+						
 						$limit = ( $tmp < 1) ? 10 : $tmp;
 						$count = count($links["external_links"]["links"]);
 							if( isset($links["external_links"]["links"]) ){

@@ -34,7 +34,6 @@
 					$pageinfo->body = new stdClass();
 					$pageinfo->body->content = $cached["body"];
 				}else{
-					// $html = getPageData(WPSPY_HOST."data.php?q=get_page_info&domain=http://".$_GET['url']."&format=json");
 					$html = getPageInfo("http://".$_GET['url'], 'json');
 					$pageinfo = json_decode($html);
 

@@ -16,8 +16,6 @@
 				$cached = checkDataStatus('site_info', 'http://'.$_GET['url']);
 				
 				if( ($cached !== 'false') && ( isset($cached['ip']) && $cached["ip"] != "N/A" ) ){
-					// $cached["wordpress_data"] = str_replace('\\', '"', $cached["wordpress_data"]);
-					// $cached["dns"] = str_replace('\\', '', $cached["dns"]);
 
 					$onsite = new stdClass();
 					$onsite->robot = $cached['robot'];
@@ -32,8 +30,6 @@
 					$whois->dns = json_decode($cached["dns"]);
 
 					$wordpress_data = json_decode($cached['wordpress_data']);
-					pre($cached['wordpress_data']);
-					pre($wordpress_data);
 				}else{
 					
 					$onsite = json_decode(getOnSite("http://".$_GET['url'], 'json'));
@@ -308,9 +304,7 @@
 
 								// Save to database
 								if( $cached == 'false' ){
-									pre("FALSE ANG CACHED");
 									$status = save_this_activity("http://".$_GET['url'], $data_array);
-									pre($status);
 								}
 							?>
 						</div>

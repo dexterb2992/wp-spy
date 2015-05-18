@@ -4,20 +4,6 @@
 		include "_nav.php"; 
 		error_reporting(E_ALL);
 		ini_set('display_errors', 1);
-
-		// function get_urls(){
-		// 	global $wpdb;
-		// 	global $fn;
-		// 	$table_name = $wpdb->prefix.'wpspy_activity_log';
-
-		// 	$sql = "SELECT DISTINCT url FROM ".$table_name;
-		// 	$res = $fn->fetch( $sql, false );
-		// 	$sites = array();
-		// 	foreach ($res as $key) {
-		// 		array_push($sites, $key->url);
-		// 	}
-		// 	return $sites;
-		// }
 	?>
 	<div class="wpspy-content">
 		<div class="wpspy-form">
@@ -32,7 +18,9 @@
 				<div class="box no-border">
 				<?php 
 					$sites = get_sites(); 
-					pre($sites);
+					if(empty($sites)){
+						echo "Sorry, we don't have anything to show you for now. Please explore the other tabs.<br/><br/>";
+					}
 				?>
 					<div class="chart-options">
 						<div class="sites">
