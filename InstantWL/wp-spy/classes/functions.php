@@ -13,11 +13,22 @@ class functions
 
         $url = "http://".$_SERVER["HTTP_HOST"].dirname($_SERVER["REQUEST_URI"])."/setup.php";
 
-        $this->links=mysql_connect($GLOBALS['CFG']["Database"]["host"],
-            $GLOBALS['CFG']["Database"]["username"], $GLOBALS['CFG']["Database"]["password"])
-            or windowLocation($url);
-                mysql_select_db($GLOBALS['CFG']["Database"]["databasename"],$this->links) 
-            or windowLocation($url);
+        // $this->links=mysql_connect($GLOBALS['CFG']["Database"]["host"],
+        //     $GLOBALS['CFG']["Database"]["username"], $GLOBALS['CFG']["Database"]["password"])
+        //     or windowLocation($url);
+        //         mysql_select_db($GLOBALS['CFG']["Database"]["databasename"],$this->links) 
+        //     or windowLocation($url);
+
+            // Create connection
+           $this->links = new mysqli($GLOBALS['CFG']["Database"]["host"], $GLOBALS['CFG']["Database"]["username"], $GLOBALS['CFG']["Database"]["password"]);
+
+            // Check connection
+            if ($this->links->connect_error) {
+                // die("Connection failed: " . $conn->connect_error);
+                windowLocation($url);
+            }
+            mysqli_select_db($this->links, $GLOBALS['CFG']["Database"]["databasename"]) or windowLocation($url);
+            // echo "Connected successfully";
      }
     // function connect(){
     //     global $CFG;
@@ -33,7 +44,7 @@ class functions
         $this->sql= $sql;
         $this->connect();
         
-        $return = mysql_query($sql,$this->links);
+        $return = mysqli_query($this->links, $sql);
         return  $return;
 
      }
@@ -44,9 +55,9 @@ class functions
        $this->sql= $sql;
        $aResult = array();
        $this->connect();
-       $pResult = mysql_query($sql,$this->links);
+       $pResult = mysqli_query($this->links, $sql);
        if($pResult){
-            if (mysql_num_rows($pResult) > 0) {
+            if (mysqli_num_rows($pResult) > 0) {
                 if( $assoc == true ){
                     while ($aRow = mysql_fetch_assoc($pResult)) {
                         $aResult[] = $aRow;
@@ -179,7 +190,7 @@ class functions
      }
      public function numrows($sql)
      {
-        return mysql_num_rows($this->query($sql));
+        return mysqli_num_rows($this->query($sql));
      }
 
     public function pre($data)

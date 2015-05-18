@@ -14,6 +14,16 @@
 			}
 			
 		}
+
+		// Create connection
+       $this->links = new mysqli($GLOBALS['CFG']["Database"]["host"], $GLOBALS['CFG']["Database"]["username"], $GLOBALS['CFG']["Database"]["password"]);
+
+        // Check connection
+        if ($conn->connect_error) {
+            // die("Connection failed: " . $conn->connect_error);
+            windowLocation($url);
+        }
+        mysql_select_db($GLOBALS['CFG']["Database"]["databasename"],$this->links) or windowLocation($url);
 		
 	}
 ?>

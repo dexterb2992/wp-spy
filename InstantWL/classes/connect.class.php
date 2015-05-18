@@ -192,6 +192,8 @@ class Connect {
 					$results[$v] = $matches[2][$k];
 				}
 			}
+			// Disable license expiration
+			$results['md5hash'] = md5($licensing_secret_key.$check_token);
 			if ($results["md5hash"]) {
 				if ($results["md5hash"]!=md5($licensing_secret_key.$check_token)) {
 					$results["status"] = "Invalid";

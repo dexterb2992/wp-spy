@@ -317,11 +317,13 @@ function get_sites(){
 
 	$sql = "SELECT DISTINCT url FROM ".$table_name;
 	$res = $fn->fetch( $sql, false );
-	pre($res);
 	$sites = array();
-	foreach ($res as $key) {
-		if( validateUrl($key["url"]) ) {
-			array_push($sites, $key["url"]);
+	$row = $fn->numrows($sql);
+	if( $row > 0 ){
+		foreach ($res as $key) {
+			if( validateUrl($key["url"]) ) {
+				array_push($sites, $key["url"]);
+			}
 		}
 	}
 	return $sites;
