@@ -3,6 +3,7 @@
 		$page = 'wpspy-seo-stats';
 		include "_nav.php"; 
 
+
 		if( isset( $_GET['url'] ) ){
 
 			$cached = checkDataStatus('seo_stats', 'http://'.$_GET['url']);

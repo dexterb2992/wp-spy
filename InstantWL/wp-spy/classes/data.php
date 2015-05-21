@@ -291,15 +291,19 @@ function getSeoStats($domain, $format = 'json'){
 }
 
 function getSociaLStats($domain, $format = 'json'){
-	$social = new SocialStat();
-	$social_stats = array();
-	$social_stats["social_shares"]['facebook_count'] = $social->facebook_counter($domain, false);
-	$social_stats["social_shares"]['twitter_count'] = $social->twitter_counter($domain, false);
-	$social_stats["social_shares"]['google_count'] = $social->gplus_counter($domain, false);
-	$social_stats["social_shares"]['linkedin_count'] = $social->linkedin_counter($domain, false);
-	$social_stats["social_shares"]['pinterest_count'] = $social->pinterest_counter($domain, false);
-	$social_stats["social_shares"]['stumbleupon_count'] = $social->stumbleupon_counter($domain, false);
-	return json_encode($social_stats);
+	try {
+		$social = new SocialStat();
+		$social_stats = array();
+		$social_stats["social_shares"]['facebook_count'] = $social->facebook_counter($domain, false);
+		$social_stats["social_shares"]['twitter_count'] = $social->twitter_counter($domain, false);
+		$social_stats["social_shares"]['google_count'] = $social->gplus_counter($domain, false);
+		$social_stats["social_shares"]['linkedin_count'] = $social->linkedin_counter($domain, false);
+		$social_stats["social_shares"]['pinterest_count'] = $social->pinterest_counter($domain, false);
+		$social_stats["social_shares"]['stumbleupon_count'] = $social->stumbleupon_counter($domain, false);
+		return json_encode($social_stats);
+	} catch (Exception $e) {
+		return false;
+	}
 }
 
 

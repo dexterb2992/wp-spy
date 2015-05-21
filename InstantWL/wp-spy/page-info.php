@@ -19,6 +19,7 @@
 				
 				if( ($cached !== 'false') && ( ($cached["body"] != "-") && ($cached["body"] != null) ) ){
 					$pageinfo = new stdClass();
+
 					
 					foreach ($cached as $key => $value) {
 						$pageinfo->$key = $value;
@@ -32,14 +33,12 @@
 					$pageinfo->meta[1]->keywords = $cached['meta_keywords'];
 					$pageinfo->meta[2]->robots = $cached['meta_robots'];
 					$pageinfo->body = new stdClass();
-					$pageinfo->body->content = $cached["body"];
+					$pageinfo->body = json_decode($cached["body"]);
 				}else{
 					$html = getPageInfo("http://".$_GET['url'], 'json');
 					$pageinfo = json_decode($html);
-
 					$data_array = array();
-					$data_array["internal_links"] = json_encode( array("links" => $temp_internal, "nofollow" => $pageinfo->internal_links->nofollow) );
-					$data_array["external_links"] = json_encode( array("links" => $temp_external, "nofollow" => $pageinfo->external_links->nofollow) );
+					
 				}
 
 				$pageinfo->internal_links = new stdClass();
@@ -48,6 +47,18 @@
 				if( $cached_links != 'false' && ( $cached_links["external_links"] != '' || $cached_links["internal_links"] != '' ) ){
 					$pageinfo->internal_links = json_decode( str_replace('/\\/', '', $cached_links['internal_links']) );
 					$pageinfo->external_links = json_decode( str_replace('/\\/', '', $cached_links['external_links']) );
+
+					if($pageinfo->internal_links->links == null || $pageinfo->internal_links->links == "null"
+						|| $pageinfo->external_links->links == null || $pageinfo->external_links->links == "null"
+					){
+						$links = getLinks("http://".$_GET['url']);
+						$pageinfo->internal_links->links = count($links["internal_links"]["links"]);
+						$pageinfo->internal_links->nofollow = count($links["internal_links"]["nofollow"]);
+
+						$pageinfo->external_links->links = count($links["external_links"]["links"]);
+						$pageinfo->external_links->nofollow = count($links["external_links"]["nofollow"]);
+					}
+
 				}else{
 					$links = getLinks("http://".$_GET['url']);
 					$pageinfo->internal_links->links = count($links["internal_links"]["links"]);
@@ -56,6 +67,10 @@
 					$pageinfo->external_links->links = count($links["external_links"]["links"]);
 					$pageinfo->external_links->nofollow = count($links["external_links"]["nofollow"]);
 				}
+
+				$data_array["internal_links"] = json_encode( array("links" => $pageinfo->internal_links->links, "nofollow" => $pageinfo->internal_links->nofollow) );
+				$data_array["external_links"] = json_encode( array("links" => $pageinfo->external_links->links, "nofollow" => $pageinfo->external_links->nofollow) );
+				$status = save_this_activity("http://".$_GET['url'], $data_array);
 			}
 		?>
 		<div class="wpspy-results row">
@@ -129,7 +144,7 @@
 									?>
 								</td>
 								<td>
-									<?php echo isset($pageinfo->meta[1]->keywords) ? strlen($pageinfo->meta[1]->keywords) : '';?>
+									<?php echo isset($pageinfo->meta[1]->keywords) && ($pageinfo->meta[1]->keywords != "N/A") ? strlen($pageinfo->meta[1]->keywords) : '';?>
 								</td>
 							</tr>
 							<tr class="meta-description">
@@ -143,7 +158,7 @@
 									?>
 								</td>
 								<td>
-									<?php echo isset($pageinfo->meta[0]->description) ? strlen($pageinfo->meta[0]->description) : '';?>
+									<?php echo isset($pageinfo->meta[0]->description) && ($pageinfo->meta[0]->description != "N/A") ? strlen($pageinfo->meta[0]->description) : '';?>
 								</td>
 							</tr>
 							<tr class="meta-robots">
@@ -157,7 +172,7 @@
 									?>
 								</td>
 								<td>
-									<?php echo isset($pageinfo->meta[2]->robots) ? strlen($pageinfo->meta[2]->robots) : '';?>
+									<?php echo isset($pageinfo->meta[2]->robots) && ($pageinfo->meta[2]->robots != "N/A") ? strlen($pageinfo->meta[2]->robots) : '';?>
 								</td>
 							</tr>
 							<tr class="external-links">

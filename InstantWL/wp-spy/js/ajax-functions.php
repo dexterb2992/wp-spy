@@ -128,7 +128,6 @@ function get_social_mention($domain){
 }
 
 function get_sitemetrics($domain){
-	include "../classes/dbhelper.php";
 	$site_metrics = get_site_metrics($domain);
 	$alexa_rank_in_country = json_decode($site_metrics["alexa_rank_in_country"]);
 	$site_metrics["alexa_rank_in_country"] = $alexa_rank_in_country;
@@ -143,7 +142,7 @@ function get_history_list($domain){
 
 	$sql = "SELECT id, DATE_FORMAT(activity_date,'%W, %M %e, %Y @ %h:%i %p') as formatted_activity_date,
 	 		activity_date FROM ".$table_name." WHERE url = '".$domain."' ORDER BY id DESC";
-	$res = $fn->fetch( $sql, false );
+	$res = $fn->fetch( $sql, false, true );
 	
 	$records = array();
 
@@ -203,7 +202,7 @@ function query_history_sql($id, $columns){
 	$table_name = $GLOBALS['CFG']['Database']['prefix'].'wpspy_activity_log';
 
 	$sql = "SELECT ".$columns." FROM ".$table_name." WHERE id = '".$id."'";
-	$res = $fn->fetch( $sql, false );
+	$res = $fn->fetch( $sql, false, true );
 
 	if( $res ){
 		return $res;

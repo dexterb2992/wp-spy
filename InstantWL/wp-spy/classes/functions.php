@@ -44,9 +44,16 @@ class functions
        $pResult = mysqli_query($this->links, $sql);
        if($pResult){
             if (mysqli_num_rows($pResult) > 0) {
-                while ($aRow = @mysqli_fetch_assoc($pResult)) {
-                    $aResult[] = $aRow;
+                if( $assoc == true ){
+                    while ($aRow = @mysqli_fetch_assoc($pResult)) {
+                        $aResult[] = $aRow;
+                    }
+                }else{
+                    while ($aRow = @mysqli_fetch_array($pResult)) {
+                        $aResult[] = $aRow;
+                    }
                 }
+                
             } else {
                 return false;
             }
@@ -70,8 +77,7 @@ class functions
          if(!$r)
          {
               return false;
-         }else
-         {
+         }else {
             return $r[0][0];
          }
      }
@@ -80,7 +86,7 @@ class functions
      #this is to prevent  XSS attack.
      function clean($string)
      {
-       return mysql_real_escape_string($string);
+       return mysqli_real_escape_string($this->links, $string);
      }
      
      #Simple form to update a table values

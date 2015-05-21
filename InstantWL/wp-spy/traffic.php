@@ -8,6 +8,8 @@
 			<?php 
 				if( isset( $_GET['url'] ) ){
 					$site_metrics = get_site_metrics('http://'.$_GET['url']);
+					pre($site_metrics);
+					$site_metrics = $site_metrics[0];
 				}
 			?>
 			<iframe src="about:blank" id="remember" name="remember" class="hidden"></iframe>
@@ -52,14 +54,7 @@
 							<div class="right">
 								<span id="alexa_rank">
 									<?php 
-										echo isset($site_metrics["alexa_rank"]) ? $site_metrics["alexa_rank"] : "N/A"; 
-										if( isset($site_metrics["alexa_rank"]) ){
-											if($site_metrics["alexa_rank"] == 0){
-												echo '<a href="/seo-stats?url='.$_GET['url'].'" target="_blank">SEO Stats</a> page.';
-											}
-										}else{
-											echo "N/A";
-										}
+										echo isset($site_metrics["alexa_rank"]) && $site_metrics["alexa_rank"] != 0 ? $site_metrics["alexa_rank"] : "N/A"; 
 									?>
 								</span>
 							</div>
@@ -73,6 +68,7 @@
 								<span id="alexa_rank_in_country">
 									<?php 
 										$alexa_rank_in_country = json_decode(stripslashes($site_metrics["alexa_rank_in_country"]));
+										pre($alexa_rank_in_country);
 										echo '<table class="rank-in-country">
 											<thead>
 												<tr>
@@ -84,17 +80,19 @@
 											<tbody>
 										';
 										if( is_array($alexa_rank_in_country) || is_object($alexa_rank_in_country) ){
-											foreach ($alexa_rank_in_country as $key) {
-												echo '<tr>
-													<td>
-														<span class="flag flag-'.$key->country_code.'"></span>
-													</td>
-													<td>
-														<span>'.$key->country.'</span>
-													</td>
-													<td>'.$key->percent_of_visitors.'</td>
-													<td>'.$key->rank.'</td>
-												</tr>';
+											if(count($alexa_rank_in_country) > 1){
+												foreach ($alexa_rank_in_country as $key) {
+													echo '<tr>
+														<td>
+															<span class="flag flag-'.$key->country_code.'"></span>
+														</td>
+														<td>
+															<span>'.$key->country.'</span>
+														</td>
+														<td>'.$key->percent_of_visitors.'</td>
+														<td>'.$key->rank.'</td>
+													</tr>';
+												}
 											}
 										}
 										echo '</tbody></table>';
@@ -112,7 +110,7 @@
 									<?php 
 										if(isset($site_metrics["quantcast_traffic_rank"])){
 											if($site_metrics["quantcast_traffic_rank"] == 0){
-												echo get_alexa_traffic_rank();
+												echo get_quantcast_rank("http://".$_GET['url']);
 											}else{
 												echo $site_metrics["quantcast_traffic_rank"];
 											}

@@ -1358,17 +1358,18 @@ jQuery(document).ready(function(){
 
 					$("#dialog").html('<div class="col-5">'+onsite+dns+'</div><div class="col-5">'+whois+history_data+'</div>');
 					
-					$("#dialog").attr("title", $this.text()).dialog({
+					$("#dialog").attr("title", "Site Info").dialog({
 						height: 440,
 						width: 910,
 						modal: true
 					});
+					$(".ui-dialog-title").html("Site Info");
 				}else if( $option == "page_info" ){
 					// append data to html body
 					$("#page_info_history_hidden tbody").html("");
 					$("div#div_page_info_history_hidden table#page_info_history_hidden tbody").append('<tr><td>URL:</td><td>'+domain_raw+'</td><td>'+domain_raw.length+'</td></tr>');
 					$.each( data[0], function (i, row){
-						if( typeof(row) != 'null' && typeof(row) != 'undefined' && row != null && typeof(row) != 'null' ){
+						if( typeof(row) != 'null' && typeof(row) != 'undefined' && row != null && typeof(row) != 'null' && row != 'N/A' && row != 'Not found' && $.trim(row) != "" ){
 							$("#page_info_history_hidden tbody").append('<tr><td>'+capitalizeSlug(i.replace('_', ''))+'</td><td>'+row+'</td><td>'+row.length+'</td></tr>');
 						}else{
 							$("#page_info_history_hidden tbody").append('<tr><td>'+capitalizeSlug(i.replace('_', ' '))+'</td><td>Not found</td><td>-</td></tr>');
@@ -1376,12 +1377,13 @@ jQuery(document).ready(function(){
 					});
 					$("#dialog").html("");
 					$("#dialog").html('<div class="box">'+$("#div_page_info_history_hidden").html()+'</div>');
-					$(".ui-dialog-title").html($this.text());
-					$("#dialog").attr("title", $this.text()).dialog({
+					
+					$("#dialog").attr("title", "Page Info").dialog({
 						height: 440,
 						width: 910,
 						modal: true
 					});
+					$(".ui-dialog-title").html("Page Info");
 				}else if( $option == "seo_stats" ){
 					var rank = '<div class="box rank">'+
 						'<div class="title">Rank</div>'+
@@ -1445,7 +1447,7 @@ jQuery(document).ready(function(){
 							}
 							pages_indexed+='<div class="entry '+i.substring(13)+'">'+
 								'<div class="left">'+
-									'<span class="icon-'+i.substring(13)+' icon"></span>'+capitalizeSlug(i.substring(13))+
+									'<span class="icon-'+i.substring(13)+' icon"></span>'+capitalizeSlug(i.substring(13)).replace(/[_]/g, " ")+
 								'</div>'+
 								'<div class="right">'+
 									value+
@@ -1471,7 +1473,7 @@ jQuery(document).ready(function(){
 							}
 							backlinks+='<div class="entry '+i.substring(10)+'">'+
 								'<div class="left">'+
-									'<span class="icon-'+i.substring(10)+' icon"></span>'+capitalizeSlug(i.substring(10))+
+									'<span class="icon-'+i.substring(10)+' icon"></span>'+capitalizeSlug(i.substring(10)).replace(/[_]/g, " ")+
 								'</div>'+
 								'<div class="right">'+
 									value+
@@ -1485,11 +1487,12 @@ jQuery(document).ready(function(){
 
 					$("#dialog").html('<div class="col-4">'+rank+backlinks+'</div><div class="col-4">'+fi_pages_indexed+'</div>');
 					
-					$("#dialog").attr("title", $this.text()).dialog({
+					$("#dialog").attr("title", "SEO Stats").dialog({
 						height: 440,
 						width: 910,
 						modal: true
 					});
+					$(".ui-dialog-title").html("SEO Stats");
 				}else if( $option == "social_stats" ){
 					data = data[0];
 					$("#facebook_likes").html(data.facebook_count);
@@ -1512,12 +1515,13 @@ jQuery(document).ready(function(){
 						'</div></div><div class="col-4"><div class="box">'+
 						$("#div_social_metrics_history").html()+
 						'</div></div>');
-					$(".ui-dialog-title").html($this.text());
-					$("#dialog").attr("title", $this.text()).dialog({
+					
+					$("#dialog").attr("title", "Social Stats").dialog({
 						height: 440,
 						width: 910,
 						modal: true
 					});
+					$(".ui-dialog-title").html("Social Stats");
 				}else if( $option == "traffic" ){
 					data = data[0];
 					$("#alexa_rank").html(data.alexa_rank);
@@ -1544,12 +1548,12 @@ jQuery(document).ready(function(){
 					$("#dialog").html('<div class="col-4"><div class="box">'+
 						$("#div_traffic_history").html()+'</div></div>'+
 						'<div class="col-4"><div class="box">'+$("#div_site_metrics_history").html()+'</div></div>');
-					$(".ui-dialog-title").html($this.text());
-					$("#dialog").attr("title", $this.text()).dialog({
+					$("#dialog").attr("title", "Traffic").dialog({
 						height: 440,
 						width: 910,
 						modal: true
 					});
+					$(".ui-dialog-title").html("Traffic");
 				}else if( $option == "link" ){
 					data = data[0];
 					var str = JSON.stringify(data);
@@ -1584,12 +1588,13 @@ jQuery(document).ready(function(){
 					}
 
 					$("#dialog").html('<div class="box">'+$("#div_links_history").html()+'</div>');
-					$(".ui-dialog-title").html($this.text());
-					$("#dialog").attr("title", $this.text()).dialog({
+
+					$("#dialog").attr("title", "Links").dialog({
 						height: 440,
 						width: 910,
 						modal: true
 					});
+					$(".ui-dialog-title").html("Links");
 				}
 
 			}).fail(function (data){

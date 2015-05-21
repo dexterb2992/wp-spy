@@ -9,7 +9,6 @@ function save_this_activity($url, $wpspy_activity) {
     $date_now = date("Y-m-d H:i:s");
     $sql = "SELECT id, activity_date FROM ".$table_name." WHERE (url='$url') AND (DATE_FORMAT(activity_date,'%Y-%m-%d') = DATE_FORMAT('$date_now', '%Y-%m-%d')) ORDER BY id DESC LIMIT 1";
 	$res = $fn->fetch($sql);
-	pre($res);
 	$wpspy_activity["activity_date"] = $date_now;
 
 	if( !isset($wpspy_activity["url"]) ){
@@ -18,7 +17,7 @@ function save_this_activity($url, $wpspy_activity) {
 
    	if( $res != 0 && !empty($res) ){
    		// Update old record in the same day
-	        $where = array('id' => $res[0]->id);
+	        $where = array('id' => $res[0]["id"]);
 	        if( $fn->update( $table_name, $wpspy_activity, $where ) ){
 	        	return true;
 	        }
@@ -75,9 +74,9 @@ function get_site_metrics($url){
 			FROM ".$table_name." WHERE url='".$url."' ORDER BY activity_date DESC LIMIT 1";
 
 	$res =  $fn->fetch( $sql, false );
-
+	return $res;
 	if( count($res) > 0 ){
-		return array(
+		return  array(
 			"alexa_rank" => $res[0]["alexa_rank"],
 			"google_page_rank" => $res[0]["google_page_rank"],
 			"quantcast_traffic_rank" => $res[0]["quantcast_traffic_rank"],

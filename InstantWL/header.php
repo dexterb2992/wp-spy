@@ -46,9 +46,9 @@ echo $generic->getOption('site-name'); }?></a>
 				<div class="nav-collapse">
 					<ul class="nav">
 						<li><a href="home.php"><?php _e('Home'); ?></a></li>
-						<li><a href="launch.php"><?php _e('Launch'); ?></a></li>
+						<li><a href="wpspy.php"><?php _e('WP Spy'); ?></a></li>
+						<li><a href="launch.php"><?php _e('VGA'); ?></a></li>
 						<li><a href="training.php"><?php _e('Training'); ?></a></li>
-						<li><a href="wp-spy">WP Spy</a></li>
 					</ul>
 		<?php if(isset($_SESSION['vd']['username'])) { ?>
 		<ul class="nav pull-right">

@@ -16,6 +16,8 @@
 	$fn = new functions();
 
 	$fn->connect();
+	error_reporting(E_ALL);
+	ini_set('display_errors', 1);
 ?>
 <div class="wpspy-head">
 	<div class="logo">
