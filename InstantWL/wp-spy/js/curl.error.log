@@ -145,3 +145,6 @@
 [url]https://www.youtube.com/watch?v=PzRlL9ksoWI [content_type] [http_code]0 [header_size]0 [request_size]0 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.78 [namelookup_time]0.125 [connect_time]0.452 [pretransfer_time]0 [size_upload]0 [size_download]0 [speed_download]0 [speed_upload]0 [download_content_length]-1 [upload_content_length]-1 [starttransfer_time]0 [redirect_time]0 [redirect_url] [primary_ip]216.58.196.46 [certinfo]Array [primary_port]443 [local_ip]192.168.10.2 [local_port]40514  
  https://www.youtube.com/watch?v=PzRlL9ksoWI
 -----------------
+[url]http://who.is/dns/http://stalthymarketer.co.uk [content_type]text/html; charset=utf-8 [http_code]500 [header_size]451 [request_size]498 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.75 [namelookup_time]0 [connect_time]0.265 [pretransfer_time]0.265 [size_upload]0 [size_download]2903 [speed_download]3870 [speed_upload]0 [download_content_length]2903 [upload_content_length]0 [starttransfer_time]0.75 [redirect_time]0 [redirect_url] [primary_ip]174.36.202.235 [certinfo]Array [primary_port]80 [local_ip]192.168.1.10 [local_port]55437  
+ http://who.is/dns/http://stalthymarketer.co.uk
+-----------------

@@ -241,7 +241,7 @@
 								<span id="wordpress_version">
 									<?php 
 										isset($wordpress_data) ? $data_array["wordpress_data"] = json_encode($wordpress_data) : '';
-										echo ($wordpress_data->version != 0) ? $wordpress_data->version : 'N/A'; 
+										echo (isset($wordpress_data) && $wordpress_data->version != 0) ? $wordpress_data->version : 'N/A'; 
 									?>
 								</span>
 							</div>
@@ -303,7 +303,7 @@
 								}
 
 								// Save to database
-								if( $cached == 'false' ){
+								if( isset($cached) && $cached == 'false' ){
 									$status = save_this_activity("http://".$_GET['url'], $data_array);
 								}
 							?>

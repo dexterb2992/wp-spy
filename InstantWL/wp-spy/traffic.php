@@ -67,31 +67,34 @@
 								</div>
 								<span id="alexa_rank_in_country">
 									<?php 
-										$alexa_rank_in_country = json_decode(stripslashes($site_metrics["alexa_rank_in_country"]));
-										pre($alexa_rank_in_country);
-										echo '<table class="rank-in-country">
-											<thead>
-												<tr>
-													<th colspan="2">Country</th>
-													<th>Percent of Visitors</th>
-													<th>Rank in Country</th>
-												</tr>
-											</thead>
-											<tbody>
-										';
-										if( is_array($alexa_rank_in_country) || is_object($alexa_rank_in_country) ){
-											if(count($alexa_rank_in_country) > 1){
-												foreach ($alexa_rank_in_country as $key) {
-													echo '<tr>
-														<td>
-															<span class="flag flag-'.$key->country_code.'"></span>
-														</td>
-														<td>
-															<span>'.$key->country.'</span>
-														</td>
-														<td>'.$key->percent_of_visitors.'</td>
-														<td>'.$key->rank.'</td>
-													</tr>';
+										isset($site_metrics) ? $alexa_rank_in_country = json_decode(stripslashes($site_metrics["alexa_rank_in_country"])) : '';
+										
+										
+										if( isset($alexa_rank_in_country) ){
+											echo '<table class="rank-in-country">
+												<thead>
+													<tr>
+														<th colspan="2">Country</th>
+														<th>Percent of Visitors</th>
+														<th>Rank in Country</th>
+													</tr>
+												</thead>
+												<tbody>
+											';
+											if( is_array($alexa_rank_in_country) || is_object($alexa_rank_in_country) ){
+												if(count($alexa_rank_in_country) > 1){
+													foreach ($alexa_rank_in_country as $key) {
+														echo '<tr>
+															<td>
+																<span class="flag flag-'.$key->country_code.'"></span>
+															</td>
+															<td>
+																<span>'.$key->country.'</span>
+															</td>
+															<td>'.$key->percent_of_visitors.'</td>
+															<td>'.$key->rank.'</td>
+														</tr>';
+													}
 												}
 											}
 										}

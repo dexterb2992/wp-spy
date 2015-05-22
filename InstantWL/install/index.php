@@ -57,7 +57,9 @@ class Install {
 
 	// Check for all form fields to be filled out
 	private function validate() {
-
+		$this->options['adminPass'] = isset($this->options['adminPass']) ? $this->options['adminPass'] : 'admin';
+		$this->options['scriptPath'] = isset($this->options['scriptPath']) ? $this->options['scriptPath'] : '/';
+		
 		if(strlen($this->options['adminPass']) < 5)
 			$this->error = '<div class="alert alert-error">'._('Password must be at least 5 characters.').'</div>';
 		else

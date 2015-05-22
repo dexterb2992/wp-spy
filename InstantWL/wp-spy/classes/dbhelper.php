@@ -109,7 +109,7 @@ function getRecommendedToolsLimit(){
 	$fn->connect();
 	$res = mysqli_query($fn->links, $sql);
 	
-	if($res > 0){
+	if($res){
 		$row = mysqli_fetch_object($res);
 		return $row->recommended_tools_limit;
 	}

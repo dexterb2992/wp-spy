@@ -16,14 +16,20 @@
 		}
 
 		// Create connection
-       $this->links = new mysqli($GLOBALS['CFG']["Database"]["host"], $GLOBALS['CFG']["Database"]["username"], $GLOBALS['CFG']["Database"]["password"]);
+		$conn = new mysqli($GLOBALS['CFG']["Database"]["host"], $GLOBALS['CFG']["Database"]["username"], $GLOBALS['CFG']["Database"]["password"]);
 
-        // Check connection
-        if ($conn->connect_error) {
-            // die("Connection failed: " . $conn->connect_error);
-            windowLocation($url);
-        }
-        mysql_select_db($GLOBALS['CFG']["Database"]["databasename"],$this->links) or windowLocation($url);
+		// Check connection
+		if ($conn->connect_error) {
+			// Do nothing. let's proceed.
+		}else{
+			$db = mysqli_select_db($conn, $GLOBALS['CFG']["Database"]["databasename"]);
+			if(!$db){
+				// Do nothing. well, if it has an error, it means the database hasn't been setup yet.
+			}else{
+				header("Location: site-info.php");
+			}
+		}
+		
 		
 	}
 ?>

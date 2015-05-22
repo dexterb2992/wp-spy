@@ -127,7 +127,7 @@ class functions
      #Simple form to update a table values
      # $table = STRING
      # $values = ARRAY that corresponds to the table fields
-     function insert($table,$values)
+     function insert($table,$values, $allow_html=false)
      {
          $f="";
          if(is_array($values))
