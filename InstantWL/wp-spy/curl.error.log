@@ -127,3 +127,12 @@
 [url]http://who.is/dns/http://stealthymarketer.co.uk [content_type]text/html; charset=utf-8 [http_code]404 [header_size]439 [request_size]500 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]17.234 [namelookup_time]0 [connect_time]0.297 [pretransfer_time]0.297 [size_upload]0 [size_download]2922 [speed_download]169 [speed_upload]0 [download_content_length]2922 [upload_content_length]0 [starttransfer_time]16.781 [redirect_time]0 [redirect_url] [primary_ip]174.36.202.235 [certinfo]Array [primary_port]80 [local_ip]192.168.1.10 [local_port]57944  
  http://who.is/dns/http://stealthymarketer.co.uk
 -----------------
+[url]http://who.is/dns/http://stealthymarketer.co.uk [content_type]text/html; charset=utf-8 [http_code]404 [header_size]439 [request_size]500 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]13.884 [namelookup_time]0 [connect_time]0.327 [pretransfer_time]0.327 [size_upload]0 [size_download]2922 [speed_download]210 [speed_upload]0 [download_content_length]2922 [upload_content_length]0 [starttransfer_time]13.884 [redirect_time]0 [redirect_url] [primary_ip]174.36.202.235 [certinfo]Array [primary_port]80 [local_ip]192.168.10.2 [local_port]1773  
+ http://who.is/dns/http://stealthymarketer.co.uk
+-----------------
+[url]http://who.is/dns/http://stealthymarketer.co.uk [content_type]text/html; charset=utf-8 [http_code]404 [header_size]439 [request_size]500 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]14.025 [namelookup_time]0.125 [connect_time]0.453 [pretransfer_time]0.453 [size_upload]0 [size_download]2922 [speed_download]208 [speed_upload]0 [download_content_length]2922 [upload_content_length]0 [starttransfer_time]14.009 [redirect_time]0 [redirect_url] [primary_ip]174.36.202.235 [certinfo]Array [primary_port]80 [local_ip]192.168.10.2 [local_port]2016  
+ http://who.is/dns/http://stealthymarketer.co.uk
+-----------------
+[url]http://who.is/dns/http://stealthymarketer.co.uk [content_type]text/html; charset=utf-8 [http_code]404 [header_size]439 [request_size]500 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]13.931 [namelookup_time]0 [connect_time]0.328 [pretransfer_time]0.328 [size_upload]0 [size_download]2922 [speed_download]209 [speed_upload]0 [download_content_length]2922 [upload_content_length]0 [starttransfer_time]13.931 [redirect_time]0 [redirect_url] [primary_ip]174.36.202.235 [certinfo]Array [primary_port]80 [local_ip]192.168.10.2 [local_port]7027  
+ http://who.is/dns/http://stealthymarketer.co.uk
+-----------------

@@ -1,0 +1,2 @@
+[21-May-2015 23:56:25 UTC] PHP Warning:  DOMDocument::loadHTML() [<a href='domdocument.loadhtml'>domdocument.loadhtml</a>]: Empty string supplied as input in /home/incredib/public_html/wp-content/plugins/wp-spy/classes/data.php on line 47
+[21-May-2015 23:57:27 UTC] PHP Warning:  DOMDocument::loadHTML() [<a href='domdocument.loadhtml'>domdocument.loadhtml</a>]: Empty string supplied as input in /home/incredib/public_html/wp-content/plugins/wp-spy/classes/data.php on line 47
