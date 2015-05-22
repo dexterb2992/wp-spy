@@ -166,3 +166,9 @@
 [url]http://www.google.com/search?num=100&&source=hp&q=site:stealthymarketer.co.uk [content_type]text/html; charset=UTF-8 [http_code]403 [header_size]175 [request_size]560 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]1.217 [namelookup_time]0 [connect_time]0.265 [pretransfer_time]0.265 [size_upload]0 [size_download]1180 [speed_download]969 [speed_upload]0 [download_content_length]1180 [upload_content_length]0 [starttransfer_time]1.217 [redirect_time]0 [redirect_url] [primary_ip]216.58.218.164 [certinfo]Array [primary_port]80 [local_ip]192.168.10.2 [local_port]37561  
  http://www.google.com/search?num=100&&source=hp&q=site:stealthymarketer.co.uk
 -----------------
+[url]https://www.quantcast.com/stealthymarketer.co.uk [content_type] [http_code]0 [header_size]0 [request_size]0 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]0.795 [namelookup_time]0.124 [connect_time]0.452 [pretransfer_time]0 [size_upload]0 [size_download]0 [speed_download]0 [speed_upload]0 [download_content_length]-1 [upload_content_length]-1 [starttransfer_time]0 [redirect_time]0 [redirect_url] [primary_ip]192.184.70.150 [certinfo]Array [primary_port]443 [local_ip]192.168.10.2 [local_port]38428  
+ https://www.quantcast.com/stealthymarketer.co.uk
+-----------------
+[url]http://www.google.com/search?num=100&&source=hp&q=site:stealthymarketer.co.uk [content_type]text/html; charset=UTF-8 [http_code]403 [header_size]175 [request_size]560 [filetime]-1 [ssl_verify_result]0 [redirect_count]0 [total_time]1.279 [namelookup_time]0 [connect_time]0.25 [pretransfer_time]0.25 [size_upload]0 [size_download]1180 [speed_download]922 [speed_upload]0 [download_content_length]1180 [upload_content_length]0 [starttransfer_time]1.279 [redirect_time]0 [redirect_url] [primary_ip]74.125.227.179 [certinfo]Array [primary_port]80 [local_ip]192.168.10.2 [local_port]38456  
+ http://www.google.com/search?num=100&&source=hp&q=site:stealthymarketer.co.uk
+-----------------
