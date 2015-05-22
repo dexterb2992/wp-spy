@@ -44,21 +44,27 @@ function getWHOIS($domain, $format='json'){
 
 	$dom = new DOMDocument;
 	libxml_use_internal_errors(true);
-	$dom->loadHTML($html);
-	$anchors = $dom->getElementsByTagName('a');
-	$x = 0;
+	
+	if(!empty($html)){
+		$dom->loadHTML($html);
+		$anchors = $dom->getElementsByTagName('a');
+		$x = 0;
 
-	// get dns servers
-		foreach ($anchors as $key) {
-			$href = $key->getAttribute('href');
+		// get dns servers
+			foreach ($anchors as $key) {
+				$href = $key->getAttribute('href');
 
-			preg_match_all('/nameserver\/[^#]+/', $href, $matches);
+				preg_match_all('/nameserver\/[^#]+/', $href, $matches);
 
-			if(!empty($matches[0])){
-				array_push( $dns, str_replace('/nameserver/', '', substr($href, 0, strlen($href)-1)) );
+				if(!empty($matches[0])){
+					array_push( $dns, str_replace('/nameserver/', '', substr($href, 0, strlen($href)-1)) );
+				}
 			}
-		}
-		$whois["dns"] = $dns;
+			$whois["dns"] = $dns;
+	}else{
+		$whois["dns"] = array();
+	}
+	
 
 	// get IP Address
 		$parse_url = parse_url($domain);
