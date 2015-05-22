@@ -4,7 +4,7 @@
 		include "_nav.php"; 
 
 
-		if( isset( $_GET['url'] ) ){
+		if( isset( $_GET['url'] ) && trim($_GET['url']) != ""  ){
 
 			$cached = checkDataStatus('seo_stats', 'http://'.$_GET['url']);
 			
@@ -19,6 +19,7 @@
 
 				$seostats["rank"]->alexa_traffic_rank = $cached["alexa_rank"];
 				$seostats["rank"]->quantcast_traffic_rank = $cached["quantcast_traffic_rank"];
+				$seostats["rank"]->google_page_rank = $cached["google_page_rank"]."/10";
 				$seostats["rank"]->alexa_rank_in_country = json_decode($cached["alexa_rank_in_country"]);
 
 				$seostats["backlinks"]->alexa = $cached["backlinks_alexa"];
@@ -45,7 +46,7 @@
 				$seostats["cached"]->google = " http://webcache.googleusercontent.com/search?cd=1&hl=en&ct=clnk&gl=us&q=cache:http://".$_GET['url'];
 				
 			}else{
-				// $html = getPageData(WPSPY_HOST."data.php?q=get_seo_stats&domain=http://".$_GET['url']."&format=json");
+				$cached = "false";
 				$html = getSeoStats("http://".$_GET['url'], 'json');
 				$seostats = (array) json_decode($html);
 
@@ -91,7 +92,7 @@
 		<div class="wpspy-form">
 			<iframe src="about:blank" id="remember" name="remember" class="hidden"></iframe>
 			<form method="post" action="" id="form_wpspy" target="remember">
-				<input	type="text" name="url" id="wpspy_url" placeholder="www.example.com" value="<?php echo isset($_GET['url']) ? 'http://'.$_GET['url'] : ''; ?>" />
+				<input	type="text" name="url" id="wpspy_url" placeholder="www.example.com" value="<?php echo isset($_GET['url']) && trim($_GET['url']) != "" ? 'http://'.$_GET['url'] : ''; ?>" />
 				<input type="submit" class="wpspy_btn" name="wpspy_submit" data-page="seo-stats" id="wpspy_submit" value="Go" />
 			</form>
 			<?php 

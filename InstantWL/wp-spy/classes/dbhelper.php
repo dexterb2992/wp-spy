@@ -39,7 +39,7 @@ function get_history_all($url){
 
 	$sql = "SELECT id, DATE_FORMAT(activity_date,'%W, %M %e, %Y @ %h:%i %p') as formatted_activity_date,
 	 		activity_date FROM ".$table_name." WHERE url = '".$url."' ORDER BY id DESC";
-	$res = $fn->fetch( $sql, false );
+	$res = $fn->fetch( $sql, false, true );
 	if(!empty($res)){
 		return $res;
 	}

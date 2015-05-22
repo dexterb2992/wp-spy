@@ -6,7 +6,7 @@
 	<div class="wpspy-content">
 		<div class="wpspy-form">
 			<?php 
-				if( isset( $_GET['url'] ) ){
+				if( isset( $_GET['url'] ) && trim($_GET['url']) != "" ){
 					$site_metrics = get_site_metrics('http://'.$_GET['url']);
 					pre($site_metrics);
 					$site_metrics = $site_metrics[0];
@@ -14,7 +14,7 @@
 			?>
 			<iframe src="about:blank" id="remember" name="remember" class="hidden"></iframe>
 			<form method="post" action="" id="form_wpspy" target="remember">
-				<input	type="text" name="wpspy_url" id="wpspy_url" placeholder="www.example.com" value="<?php echo isset($_GET['url']) ? 'http://'.$_GET['url'] : ''; ?>"/>
+				<input	type="text" name="wpspy_url" id="wpspy_url" placeholder="www.example.com" value="<?php echo isset($_GET['url']) && trim($_GET['url']) != "" ? 'http://'.$_GET['url'] : ''; ?>"/>
 				<input type="submit" class="wpspy_btn" name="wpspy_submit" data-page="traffic" id="wpspy_submit" value="Go" />
 			</form>
 		</div>

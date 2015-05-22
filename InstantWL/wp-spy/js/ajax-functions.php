@@ -138,12 +138,13 @@ function get_history_list($domain){
 	global $wpdb;
 	global $fn;
 
+	$fn->connect();
 	$table_name = $GLOBALS['CFG']['Database']['prefix'].'wpspy_activity_log';
 
 	$sql = "SELECT id, DATE_FORMAT(activity_date,'%W, %M %e, %Y @ %h:%i %p') as formatted_activity_date,
 	 		activity_date FROM ".$table_name." WHERE url = '".$domain."' ORDER BY id DESC";
 	$res = $fn->fetch( $sql, false, true );
-	
+	pre($res);
 	$records = array();
 
 	if(count($res) > 0){
@@ -154,7 +155,7 @@ function get_history_list($domain){
 				<a href="javascript:void(0);" class="history-actions" data-action="seo_stats" data-id="'.$key["id"].'">SEO Stats</a>
 				<a href="javascript:void(0);" class="history-actions" data-action="social_stats" data-id="'.$key["id"].'">Social Stats</a>
 				<a href="javascript:void(0);" class="history-actions" data-action="traffic" data-id="'.$key["id"].'">Traffic</a>
-				<a href="javascript:void(0);" class="history-actions" data-action="link" data-id="'.$key["id"].'">Link</a>';
+				<a href="javascript:void(0);" class="history-actions" data-action="link" data-id="'.$key["id"].'">Links</a>';
 			$record = array( $key["formatted_activity_date"], $action );
 			array_push($records, $record);
 		}

@@ -2,8 +2,6 @@
 	<?php 
 		$page = 'wpspy-graphs';
 		include "_nav.php"; 
-		error_reporting(E_ALL);
-		ini_set('display_errors', 1);
 	?>
 	<div class="wpspy-content">
 		<div class="wpspy-form">

@@ -18,6 +18,8 @@
 	$fn->connect();
 	error_reporting(E_ALL);
 	ini_set('display_errors', 1);
+	ini_set('max_execution_time', 300); //300 seconds = 5 minutes
+
 ?>
 <div class="wpspy-head">
 	<div class="logo">

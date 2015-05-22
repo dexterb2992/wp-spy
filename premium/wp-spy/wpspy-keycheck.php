@@ -1,6 +1,6 @@
 <div class="wpspy-wrapper">
 	<?php 
-		$page = 'wpspy-site-info';
+		$page = 'wpspy-keycheck';
 		include plugin_dir_path( __FILE__ )."classes/config.php";
 		include plugin_dir_path( __FILE__ )."classes/dbhelper.php";
 		include plugin_dir_path( __FILE__ )."_nav.php"; 
@@ -52,37 +52,60 @@ if(isset($_REQUEST['licensekey'])) {
 ?>
 <script>
 console.log("key: <?php echo $lickey; ?>");
-jQuery.getJSON("http://topdogimsoftware.com/spylicense/index.php?licensekey=<?php echo $lickey; ?>&domainname=<?php echo $domain; ?>&wptype='premium'&format=json&jsoncallback=?",
+var url = "http://topdogimsoftware.com/spylicense/index.php?licensekey=<?php echo $lickey; ?>&domainname=<?php echo $domain; ?>&wptype='premium'&format=json&jsoncallback=?";
+console.log(url);
+jQuery.getJSON(url,
 function(data) {
 var wpspyajax = '<?php echo admin_url( 'admin-ajax.php' ); ?>';
+console.log(data);
 if(data.response == 'Valid'){
-	jQuery.ajax({
-	type: "GET",
-	async: false,
-	url:wpspyajax,	
-	data:	{  
-			action: 'wp_lead_lcheckey',
-			stats: data.response,											
-			p_type:trim('<?PHP echo $lickey; ?>')	
-	}, 	
-	cache: false,
-	dataType: "html",	
-	success: function(data, textStatus, XMLHttpRequest)	{
-	  
-	if(trim(data) == 'do')	{
-			
-		var wppmsg = "API key activated successfully.";	
-		document.getElementById("wpp_lcheckmsg").innerHTML = wppmsg;	
-		document.getElementById("wpp_lcheckmsg").style.color = '#339313';
+	var k = trim('<?PHP echo $lickey; ?>');
+	$.ajax({
+		url : wpspy_ajaxurl,
+		type : 'post',
+		dataType : 'json',
+		data : { q : 'save_license', key : k }
+	}).done(function (rs){
+		console.log(rs);
+
+		jQuery.ajax({
+			type: "GET",
+			async: false,
+			url:wpspyajax,	
+			data:	{  
+					action: 'wp_lead_lcheckey',
+					stats: data.response,											
+					p_type:trim('<?PHP echo $lickey; ?>')	
+			}, 	
+			cache: false,
+			dataType: "html",	
+			success: function(data, textStatus, XMLHttpRequest)	{
+			  
+			if(trim(data) == 'do')	{
+					
+				var wppmsg = "API key activated successfully.";	
+				document.getElementById("wpp_lcheckmsg").innerHTML = wppmsg;	
+				document.getElementById("wpp_lcheckmsg").style.color = '#339313';
+
+				setTimeout(function(){	
+				window.location= <?php echo "'" . $location . "'"; ?>;	
+				}, 2000);			
+			}
+			},	
+			error: function(MLHttpRequest, textStatus, errorThrown) {  
+				
+			},		
+		});
+
+		jQuery("#wpp_lcheckmsg").css('color', '#339313')
+		jQuery("#wpp_lcheckmsg").html("API key activated successfully.");
+
 		setTimeout(function(){	
 		window.location= <?php echo "'" . $location . "'"; ?>;	
-		}, 2000);			
-	}
-	},	
-	error: function(MLHttpRequest, textStatus, errorThrown) {  
-		
-	},		
+		}, 2000);	
 	});
+
+	
 }else if(data.response == 'Invalid'){	
 		
 		var wppmsg = "Invalid API key. Please contact out <a href='http://karthikramani.freshdesk.com/'>Support Team</a> ";	

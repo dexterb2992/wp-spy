@@ -155,4 +155,14 @@ if( $q == "save_activity" ){
 			"daily_pageviews_per_visitor" => $alexa->getTimeOnSite()
 		)
 	);
+}else if( $q == "save_license" ){
+	$file = fopen("license.dx", "w");
+	$text = $_POST['key'];
+	$res = fwrite($file, $text);
+	fclose($file);
+	if($res){
+		echo json_encode(array("status" => "ok"));
+	}else{
+		echo json_encode(array("status" => "error"));
+	}
 }

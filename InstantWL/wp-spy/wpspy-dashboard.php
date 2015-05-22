@@ -1,27 +1,22 @@
 <div class="wpspy-wrapper">
 	<?php 
 		$page = 'wpspy-site-info';
-		include "classes/config.php";
-		include "classes/dbhelper.php";
 		include "_nav.php"; 
-
-		function cleanStr($str){
-			return ucwords( str_replace("-", " ", $str) );
-		}
 	?>
 	<div class="wpspy-content">
 		<div class="wpspy-form">
 			<iframe src="about:blank" id="remember" name="remember" class="hidden"></iframe>
 			<form method="post" action="" id="form_wpspy" target="remember">
-				<input	type="text" name="wpspy_url" id="wpspy_url" placeholder="www.example.com" value="<?php echo isset($_GET['url']) ? 'http://'.$_GET['url'] : ''; ?>"/>
+				<input	type="text" name="wpspy_url" id="wpspy_url" placeholder="www.example.com" value="<?php echo isset($_GET['url']) && trim($_GET['url']) != "" ? 'http://'.$_GET['url'] : ''; ?>"/>
 				<input type="submit" class="wpspy_btn" name="wpspy_submit" data-page="site-info" id="wpspy_submit" value="Go" />
 			</form>
 		</div>
 		<?php 
-			if( isset($_GET['url']) ){
+			if( isset($_GET['url']) && trim($_GET['url']) != "" ){
 				$cached = checkDataStatus('site_info', 'http://'.$_GET['url']);
+				
 				if( ($cached !== 'false') && ( isset($cached['ip']) && $cached["ip"] != "N/A" ) ){
-					
+
 					$onsite = new stdClass();
 					$onsite->robot = $cached['robot'];
 					$onsite->sitemap_index = $cached['sitemap_index'];
@@ -36,9 +31,11 @@
 
 					$wordpress_data = json_decode($cached['wordpress_data']);
 				}else{
-					$onsite =  json_decode(getPageData(WPSPY_HOST."data.php?q=get_onsite&domain=http://".$_GET['url']."&format=json"));
-					$whois =  json_decode(getPageData(WPSPY_HOST."data.php?q=get_whois&domain=http://".$_GET['url']."&format=json"));
-					$wordpress_data = json_decode(getPageData(WPSPY_HOST."data.php?q=get_wordpress_data&domain=http://".$_GET['url']."&format=json"));
+					
+					$onsite = json_decode(getOnSite("http://".$_GET['url'], 'json'));
+					$whois = json_decode(getWhOIS("http://".$_GET['url'], 'json'));
+					$wordpress_data = json_decode(getWordpressData("http://".$_GET['url'], 'json'));
+
 					$data_array = array();
 				}
 			}
@@ -63,7 +60,7 @@
 							<div class="right">
 								<?php 
 									if(isset($_GET['url'])){
-										if( isset($onsite->robot) && $onsite->robot == 1 ){
+										if( isset($onsite->robot) && $onsite->robot == 'true' ){
 											$data_array["robot"] = $onsite->robot;
 											echo '<span id="robots" class="icon-check icon"></span>';
 										}else{
@@ -82,7 +79,7 @@
 							<div class="right">
 								<?php 
 									if(isset($_GET['url'])){
-										if( isset($onsite->sitemap_index) && $onsite->sitemap_index == 1 ){
+										if( isset($onsite->sitemap_index) && $onsite->sitemap_index == 'true' ){
 											$data_array["sitemap_index"] = $onsite->sitemap_index;
 											echo '<span id="sitemap" class="icon-check icon"></span>';
 										}else{
@@ -244,7 +241,7 @@
 								<span id="wordpress_version">
 									<?php 
 										isset($wordpress_data) ? $data_array["wordpress_data"] = json_encode($wordpress_data) : '';
-										echo ($wordpress_data->version != 0) ? $wordpress_data->version : 'N/A'; 
+										echo (isset($wordpress_data) && $wordpress_data->version != 0) ? $wordpress_data->version : 'N/A'; 
 									?>
 								</span>
 							</div>
@@ -306,7 +303,7 @@
 								}
 
 								// Save to database
-								if( $cached == 'false' ){
+								if( isset($cached) && $cached == 'false' ){
 									$status = save_this_activity("http://".$_GET['url'], $data_array);
 								}
 							?>
@@ -314,40 +311,6 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="col-4">
-				<div class="misc box">
-					<div class="title">Misc</div>
-					<div class="content">
-						<div class="entry">
-							<div class="left">
-								<strong>Google Adsense</strong>
-							</div>
-							<div class="right">
-								<span id="google_adsense" class="icon-check icon"></span>
-							</div>
-						</div>
-
-						<div class="entry">
-							<div class="left">
-								Aweber
-							</div>
-							<div class="right">
-								<a href="#" target="_blank" id="aweber" class="icon"></a>
-								<span class="icon-check icon"></span>
-							</div>
-						</div>
-
-						<div class="entry">
-							<div class="left">
-								Links (On Page)
-							</div>
-							<div class="right">
-								<a href="#" class="icon icon-eye" id="links_on_page" class="icon"></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
 		</div>
 	</div>
 </div>

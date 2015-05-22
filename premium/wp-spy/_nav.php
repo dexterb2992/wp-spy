@@ -5,11 +5,63 @@
 <?php 
 	include "_styles.php";
 	include "_scripts.php";
-	error_reporting(E_ALL);
-	ini_set('display_errors', 1);
+	error_reporting(0);
+	ini_set('display_errors', 0);
 	ini_set('max_execution_time', 300); //300 seconds = 5 minutes
 
 ?>
+<?php
+$u1 = plugins_url();
+global $wpdb;
+$wpp_msg = '';
+$lickey = '';
+	$xx =BASE_URL.'js/license.dx';
+	$lickey = file_get_contents($xx);
+	//$ip = magic_getRealIpAddr_lead();
+	$domain = $_SERVER['HTTP_HOST'];
+	$location = "admin.php?page=wpspy-dashboard&atoken=$lickey";
+?>
+<script>
+	$(window).load(function(){
+		console.log("key: <?php echo $lickey; ?>");
+		console.log("xx: <?php echo $xx; ?>");
+		var key = "<?php echo $lickey; ?>";
+		var page = "<?php echo $page; ?>";
+		if( trim(key) == "" ){
+			if( page != "wpspy-keycheck" ){
+				window.location = "?page=wpspy-keycheck";
+			}
+		}
+
+		$.ajax({
+			url : "http://topdogimsoftware.com/spylicense/index.php?licensekey=<?php echo $lickey; ?>&domainname=<?php echo $domain; ?>&wptype='premium'&format=json&jsoncallback=?",
+			type : 'get',
+			dataType : 'json'
+		}).done(function(data){
+			console.log("done");
+			var wpspyajax = '<?php echo admin_url( 'admin-ajax.php' ); ?>';
+			if(data.response == 'Valid'){
+				// it's alright
+				console.log("key valid");
+			}else if(data.response == 'Invalid'){	
+					
+				if( page != "wpspy-keycheck" ){
+					window.location = "?page=wpspy-keycheck";
+				}
+			}
+		}).fail(function(data){
+			console.log("fail");
+			if( page != "wpspy-keycheck" ){
+				window.location = "?page=wpspy-keycheck";
+			}
+		});
+
+		function trim(text) {
+			return text.replace(/^\s+|\s+$/g, "");
+		}
+
+	});
+</script>
 <div class="wpspy-head">
 	<div class="logo">
 		<img src="<?php echo plugins_url('/wp-spy/images/spy.png')?>" draggable="false">

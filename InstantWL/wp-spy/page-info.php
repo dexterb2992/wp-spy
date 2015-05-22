@@ -8,12 +8,12 @@
 		<div class="wpspy-form">
 			<iframe src="about:blank" id="remember" name="remember" class="hidden"></iframe>
 			<form method="post" action="" id="form_wpspy" target="remember">
-				<input	type="text" name="wpspy_url" id="wpspy_url" placeholder="www.example.com" value="<?php echo isset($_GET['url']) ? 'http://'.$_GET['url'] : ''; ?>"/>
+				<input	type="text" name="wpspy_url" id="wpspy_url" placeholder="www.example.com" value="<?php echo isset($_GET['url']) && trim($_GET['url']) != "" ? 'http://'.$_GET['url'] : ''; ?>"/>
 				<input type="submit" class="wpspy_btn" name="wpspy_submit" data-page="page-info" id="wpspy_submit" value="Go" />
 			</form>
 		</div>
 		<?php 
-			if( isset( $_GET['url'] ) ){
+			if( isset( $_GET['url'] ) && trim($_GET['url']) != "" ){
 				$cached = checkDataStatus('page_info', 'http://'.$_GET['url']);
 				$cached_links = checkDataStatus('link', 'http://'.$_GET['url']);
 				

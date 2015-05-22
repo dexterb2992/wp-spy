@@ -37,7 +37,7 @@
 
 					$wordpress_data = json_decode($cached['wordpress_data']);
 				}else{
-					
+					$cached = "false";
 					$onsite = json_decode(getOnSite("http://".$_GET['url'], 'json'));
 					$whois = json_decode(getWhOIS("http://".$_GET['url'], 'json'));
 					$wordpress_data = json_decode(getWordpressData("http://".$_GET['url'], 'json'));

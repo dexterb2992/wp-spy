@@ -92,6 +92,7 @@ jQuery(document).ready(function(){
 		});
 
 		$("#form_wpspy").submit(function(e){
+			$('.error').remove();
 			var domain = $("#wpspy_url").val(), page = $("#wpspy_submit").data("page"), btn = $("#wpspy_submit"),
 				progress_limit = 0, progress_current = 0;
 			disable_button(btn, "Please wait..");
@@ -241,8 +242,9 @@ jQuery(document).ready(function(){
 										data : { q : 'get_wordpress_data', url : domain_raw },
 										dataType : 'json'
 									}).done(function (data){
+										console.log(data);
 										data_array["wordpress_data"] = JSON.stringify(data);
-
+										console.log(data_array["wordpress_data"]);
 										// update current progress
 											progress_current++;
 											check_progress(progress_limit, progress_current);
@@ -319,7 +321,7 @@ jQuery(document).ready(function(){
 										}
 									}).fail(function (data){
 										console.log("error:");
-										console.log(data.responseText);
+										console.log(data);
 										// here we enable the submit button again
 											enable_button(btn, "Go");
 
@@ -353,13 +355,18 @@ jQuery(document).ready(function(){
 								$("#country").html('<span class="flag flag-'+data.country_code+'"></span><span>'+data.country+'</span>');
 							
 							// wordpress data
+								console.log(data.wordpress_data);
 								var str_data = String(data.wordpress_data).replace(/\\/g, "");
 								
 								var wordpress_data = $.parseJSON(str_data);
+								// var wordpress_data = $.parseJSON(data.wordpress_data);
+
 
 								// wordpress version
 									$("div.plugins").html("");
-									if( wordpress_data.version != '0' ){
+									console.log(wordpress_data);
+									
+									if( wordpress_data !== null && typeof(wordpress_data.version) != 'null' && wordpress_data.version != '0' ){
 										$("#wordpress_version").html(wordpress_data.version);
 
 										// extract plugins and theme details
@@ -546,10 +553,17 @@ jQuery(document).ready(function(){
 								// here we enable the submit button again
 									enable_button(btn, "Go");
 
+									console.log("typeof(data.meta) = "+typeof(data.meta));
+									console.log(data.meta);
+									data.meta.description  = "Not found";
+									data.meta.keywords = "Not found";
+									data.meta.robots  = "Not found";
+
 								try{
+									data.meta.robots = ( typeof(data.meta[2].robots) != 'undefined' ) ? data.meta[2].robots : data.meta.robots;
 									data.meta.description = ( typeof(data.meta[0].description) != 'undefined' ) ? data.meta[0].description : data.meta.description;
 									data.meta.keywords = ( typeof(data.meta[1].keywords) != 'undefined' ) ? data.meta[1].keywords : data.meta.keywords;
-									data.meta.robots = ( typeof(data.meta[2].robots) != 'undefined' ) ? data.meta[2].robots : data.meta.robots;
+
 								}catch(e){
 									console.log(e);
 								}
@@ -563,9 +577,9 @@ jQuery(document).ready(function(){
 										"url" : domain_raw,
 										"canonical_url" : data.canonical_url,
 										"title" : data.title,
-										"meta_keywords" : data.meta.keywords,
-										"meta_description" : data.meta.description,
-										"meta_robots" : data.meta.robots,
+										"meta_keywords" : typeof(data.meta.keywords) != 'undefined' ? data.meta.keywords : '',
+										"meta_description" : typeof(data.meta.description) != 'undefined' ? data.meta.description : '',
+										"meta_robots" : typeof(data.meta.robots) != 'undefined' ? data.meta.robots : '',
 										"h1" : data.h1,
 										"h2" : data.h2,
 										"bold_strong" : data.bold_strong,
@@ -803,12 +817,12 @@ jQuery(document).ready(function(){
 						dataType : 'json'
 					}).done(function (data){
 						console.log( typeof(data) );
-						
+						console.log(data);
 
 						if( data !== false && data[0].alexa_rank == 0 ){
 							data = false;
 						}
-
+						
 						$("#archived").attr('href', 'https://web.archive.org/web/*/'+domain_raw).addClass('icon').addClass('icon-eye');
 						$("#google_cached").attr('href', 'http://webcache.googleusercontent.com/search?cd=1&hl=en&ct=clnk&gl=us&q=cache:'+domain_raw).addClass('icon').addClass('icon-eye');
 
@@ -867,7 +881,11 @@ jQuery(document).ready(function(){
 									progress_current++;
 									check_progress_and_save(progress_limit, progress_current, data_array);
 								}).fail(function (data){
+									progress_current++;
 									console.log(data);
+									fetching_failure($('.backlinks'), 'Backlinks Data');
+									$('.pages-indexed .title span').fadeOut(function(){ $(this).remove(); });
+									$('.pages-indexed .title').trigger('click');
 								});
 
 							/* let's get all the pages indexed data */
@@ -890,8 +908,10 @@ jQuery(document).ready(function(){
 									check_progress_and_save(progress_limit, progress_current, data_array);
 								}).fail(function (data){
 									console.log(data);
+									progress_current++;
 									$('.pages-indexed .title span').fadeOut(function(){ $(this).remove(); });
 									$('.pages-indexed .title').trigger('click');
+									fetching_failure($('.pages-indexed'), 'Pages indexed Data');
 								});
 
 							/* let's get the alexa rank in country */
@@ -925,7 +945,7 @@ jQuery(document).ready(function(){
 
 							$("#alexa_rank").html(data.alexa_rank);
 							$("#quantcast_traffic").html(data.quantcast_traffic);
-							$("#google_page_rank").html(data.google_page_rank+"/10");
+							$("#google_page_rank").html(data.google_page_rank);
 							$.each(data, function (i, row){
 								// pages indexed
 									var index = i.indexOf('page_indexed_', 0);
@@ -1055,7 +1075,7 @@ jQuery(document).ready(function(){
 								if( typeof(row) === 'null' || row === null || row === undefined || row.length === 0 ){
 									$(".rank-in-country tbody").append('<tr>'+
 										'<td colspan="4">'+
-											'<span class="failed">No data available for now. Check out the <a href="'+$("#nav_seo_stats").data("href")+'" target="_blank">SEO Stats</a>  for '+domain_raw+' and try again.</span>'+
+											'<span class="failed">No data available for now. Check out the <a href="'+$("#nav_seo_stats").attr("href")+'" target="_blank">SEO Stats</a>  for '+domain_raw+' and try again.</span>'+
 										'</td>'+
 									'</tr>');
 								}else{
@@ -1138,9 +1158,6 @@ jQuery(document).ready(function(){
 					});
 				}else if( page == "graphs" ){
 					progress_limit = 1;
-
-					$(".chart-options select").children('option').removeAttr("selected").children('option:first').attr("selected", "selected")
-
 					$.ajax({
 						url : wpspy_ajaxurl,
 						type : 'post',
@@ -1154,12 +1171,12 @@ jQuery(document).ready(function(){
 						FusionCharts.ready(function(){
 							var revenueChart = new FusionCharts({
 								type: "MSColumn2D",
-								width: "950",
-								height: "450",
+								width: "700",
+								height: "350",
 								dataFormat: "json",
 								dataSource: {
 								   "chart":{
-									  "caption":"Alexa Rank - "+$("#wpspy_url").val(),
+									  "caption":"Alexa Rank - "+$("#compare_sites option:selected").val(),
 									  "bgcolor":"ffffff,ffffff",
 									  "showlabels":"1",
 									  "showvalues":"0",
@@ -1341,36 +1358,32 @@ jQuery(document).ready(function(){
 
 					$("#dialog").html('<div class="col-5">'+onsite+dns+'</div><div class="col-5">'+whois+history_data+'</div>');
 					
-					$("#dialog").attr("title", $this.text()).dialog({
+					$("#dialog").attr("title", "Site Info").dialog({
 						height: 440,
 						width: 910,
 						modal: true
 					});
+					$(".ui-dialog-title").html("Site Info");
 				}else if( $option == "page_info" ){
 					// append data to html body
 					$("#page_info_history_hidden tbody").html("");
 					$("div#div_page_info_history_hidden table#page_info_history_hidden tbody").append('<tr><td>URL:</td><td>'+domain_raw+'</td><td>'+domain_raw.length+'</td></tr>');
 					$.each( data[0], function (i, row){
-						if(i != "body"){
-							if( typeof(row) != 'null' && typeof(row) != 'undefined' && row != null && typeof(row) != 'null' ){
-								$("#page_info_history_hidden tbody").append('<tr><td>'+capitalizeSlug(i.replace(/[_]/g, ' '))+'</td><td>'+row+'</td><td>'+row.length+'</td></tr>');
-							}else{
-								$("#page_info_history_hidden tbody").append('<tr><td>'+capitalizeSlug(i.replace(/[_]/g, ' '))+'</td><td>Not found</td><td>-</td></tr>');
-							}
+						if( typeof(row) != 'null' && typeof(row) != 'undefined' && row != null && typeof(row) != 'null' && row != 'N/A' && row != 'Not found' && $.trim(row) != "" ){
+							$("#page_info_history_hidden tbody").append('<tr><td>'+capitalizeSlug(i.replace('_', ''))+'</td><td>'+row+'</td><td>'+row.length+'</td></tr>');
 						}else{
-							var body = {};
-							body = $.parseJSON(row);
-							$("#page_info_history_hidden tbody").append('<tr><td>'+capitalizeSlug(i.replace(/[_]/g, ' '))+'</td><td>'+body.content+'</td><td>'+body.length+'</td></tr>');
+							$("#page_info_history_hidden tbody").append('<tr><td>'+capitalizeSlug(i.replace('_', ' '))+'</td><td>Not found</td><td>-</td></tr>');
 						}
 					});
 					$("#dialog").html("");
 					$("#dialog").html('<div class="box">'+$("#div_page_info_history_hidden").html()+'</div>');
-					$(".ui-dialog-title").html($this.text());
-					$("#dialog").attr("title", $this.text()).dialog({
+					
+					$("#dialog").attr("title", "Page Info").dialog({
 						height: 440,
 						width: 910,
 						modal: true
 					});
+					$(".ui-dialog-title").html("Page Info");
 				}else if( $option == "seo_stats" ){
 					var rank = '<div class="box rank">'+
 						'<div class="title">Rank</div>'+
@@ -1399,7 +1412,7 @@ jQuery(document).ready(function(){
 									'Google Page Rank'+
 								'</div>'+
 								'<div class="right">'+
-									'<span id="google_page_rank">'+data[0].google_page_rank+'/10</span>'+
+									'<span id="google_page_rank"></span>'+
 								'</div>'+
 							'</div>'+
 						'</div>'+
@@ -1434,7 +1447,7 @@ jQuery(document).ready(function(){
 							}
 							pages_indexed+='<div class="entry '+i.substring(13)+'">'+
 								'<div class="left">'+
-									'<span class="icon-'+i.substring(13)+' icon"></span>'+capitalizeSlug(i.substring(13))+
+									'<span class="icon-'+i.substring(13)+' icon"></span>'+capitalizeSlug(i.substring(13)).replace(/[_]/g, " ")+
 								'</div>'+
 								'<div class="right">'+
 									value+
@@ -1460,7 +1473,7 @@ jQuery(document).ready(function(){
 							}
 							backlinks+='<div class="entry '+i.substring(10)+'">'+
 								'<div class="left">'+
-									'<span class="icon-'+i.substring(10)+' icon"></span>'+capitalizeSlug(i.substring(10))+
+									'<span class="icon-'+i.substring(10)+' icon"></span>'+capitalizeSlug(i.substring(10)).replace(/[_]/g, " ")+
 								'</div>'+
 								'<div class="right">'+
 									value+
@@ -1474,11 +1487,12 @@ jQuery(document).ready(function(){
 
 					$("#dialog").html('<div class="col-4">'+rank+backlinks+'</div><div class="col-4">'+fi_pages_indexed+'</div>');
 					
-					$("#dialog").attr("title", $this.text()).dialog({
+					$("#dialog").attr("title", "SEO Stats").dialog({
 						height: 440,
 						width: 910,
 						modal: true
 					});
+					$(".ui-dialog-title").html("SEO Stats");
 				}else if( $option == "social_stats" ){
 					data = data[0];
 					$("#facebook_likes").html(data.facebook_count);
@@ -1501,12 +1515,13 @@ jQuery(document).ready(function(){
 						'</div></div><div class="col-4"><div class="box">'+
 						$("#div_social_metrics_history").html()+
 						'</div></div>');
-					$(".ui-dialog-title").html($this.text());
-					$("#dialog").attr("title", $this.text()).dialog({
+					
+					$("#dialog").attr("title", "Social Stats").dialog({
 						height: 440,
 						width: 910,
 						modal: true
 					});
+					$(".ui-dialog-title").html("Social Stats");
 				}else if( $option == "traffic" ){
 					data = data[0];
 					$("#alexa_rank").html(data.alexa_rank);
@@ -1533,12 +1548,12 @@ jQuery(document).ready(function(){
 					$("#dialog").html('<div class="col-4"><div class="box">'+
 						$("#div_traffic_history").html()+'</div></div>'+
 						'<div class="col-4"><div class="box">'+$("#div_site_metrics_history").html()+'</div></div>');
-					$(".ui-dialog-title").html($this.text());
-					$("#dialog").attr("title", $this.text()).dialog({
+					$("#dialog").attr("title", "Traffic").dialog({
 						height: 440,
 						width: 910,
 						modal: true
 					});
+					$(".ui-dialog-title").html("Traffic");
 				}else if( $option == "link" ){
 					data = data[0];
 					var str = JSON.stringify(data);
@@ -1573,12 +1588,13 @@ jQuery(document).ready(function(){
 					}
 
 					$("#dialog").html('<div class="box">'+$("#div_links_history").html()+'</div>');
-					$(".ui-dialog-title").html($this.text());
-					$("#dialog").attr("title", $this.text()).dialog({
+
+					$("#dialog").attr("title", "Links").dialog({
 						height: 440,
 						width: 910,
 						modal: true
 					});
+					$(".ui-dialog-title").html("Links");
 				}
 
 			}).fail(function (data){
@@ -1864,7 +1880,6 @@ jQuery(document).ready(function(){
 		});
 
 
-
 	function get_social_mention(domain){
 		$.ajax({
 			url : wpspy_ajaxurl,
@@ -1879,10 +1894,14 @@ jQuery(document).ready(function(){
 					social_mention_attempts++;
 				}else{
 					social_mention_attempts = 0;
+					$(".social-metrics .title span").fadeOut(function (){ 
+						$(this).remove();
+						$('.social-metrics .content .entry .right span:first').html('<span class="red" style="margin-top: -9px;">Server too busy</span>'); 
+					});
+					$(".social-metrics .title").trigger('click');
 					return 0;
 					// x++;
 					// checkx(); // save to database
-
 				}
 			}else{
 				social_mention_attempts = 0;
@@ -1991,7 +2010,7 @@ jQuery(document).ready(function(){
 		}
 
 		function fetching_failure(div, title){
-			div.append('<div class="erro red">'+title+' failed to load. Please try again.</div>');
+			div.append('<div class="error red">'+title+' failed to load. Please try again.</div>');
 		}
 
 		function is_numeric(mixed_var) {
