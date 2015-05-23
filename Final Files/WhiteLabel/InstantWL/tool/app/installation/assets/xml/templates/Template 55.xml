@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="image" opacity="1" index="0" source="assets/graphics/Lower Thirds/green02.png" xpos="38.35" ypos="264" width="411.2" height="88" rotation="0"/>
+  <item type="image" opacity="1" index="1" source="assets/graphics/Lower Thirds/47.png" xpos="434.2" ypos="271.4" width="233.6" height="72" rotation="0"/>
+  <item type="shape" opacity="1" index="2" shape_type="Rectangle" color="0 " xpos="161.6" ypos="305" width="248.8" height="22.4" rotation="0"/>
+  <item type="image" opacity="1" index="3" source="uploaded_image/5230b04d5ab7c.png" xpos="62" ypos="263.2" width="146" height="75" rotation="0"/>
+  <item type="shape" opacity="1" index="4" shape_type="Triangle" color="15867904 " xpos="167.2" ypos="332.8" width="1703936" height="1507328" rotation="0.0009853609308196377"/>
+  <item type="text" opacity="1" index="5" font="Archivo Black" size="68" color="16777215@@@16777215@@@16777215@@@16777215" xpos="95.6" ypos="284.2" alignment="left" rotation="0" scalex="0.36850541830062866" scaley="0.36850541830062866" filter="true"><![CDATA[NEWS]]></item>
+  <item type="text" opacity="1" index="6" font="Arial" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="202.6" ypos="279" alignment="left" rotation="0" scalex="0.30992746353149414" scaley="0.30992746353149414" filter="true"><![CDATA[JAMES]]></item>
+  <item type="text" opacity="1" index="7" font="Archivo Black" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="188.2" ypos="308.4" alignment="left" rotation="0" scalex="0.14878420531749725" scaley="0.14878420531749725" filter="true"><![CDATA[REPORTING LIVE FROM DOWNTOWN]]></item>
+  <item type="image" opacity="1" index="8" source="uploaded_image/5230b3e05c208.png" xpos="-95.8" ypos="258.2" width="218.3" height="93.8" rotation="0"/>
+  <item type="text" opacity="1" index="9" font="Archivo Black" size="68" color="9803157@@@9803157@@@9803157" xpos="13.6" ypos="281.2" alignment="left" rotation="0" scalex="0.4312756657600403" scaley="0.4312756657600403" filter="true"><![CDATA[911]]></item>
+  <item type="text" opacity="1" index="10" font="Archivo Black" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="276.4" ypos="273.6" alignment="left" rotation="0" scalex="0.310331255197525" scaley="0.32141783833503723" filter="true"><![CDATA[ANTONIO]]></item>
+  <item type="image" opacity="1" index="11" source="assets/graphics/Other Icons/live1.png" xpos="536.4" ypos="21.15" width="80.95" height="48.55" rotation="0"/>
+  <item type="text" opacity="1" index="12" font="Archivo Black" size="68" color="9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512@@@9184512" xpos="445" ypos="298" alignment="left" rotation="0" scalex="0.1815684735774994" scaley="0.1815684735774994" filter="true"><![CDATA[TOP OF THE HOUR NEWS]]></item>
+</data>

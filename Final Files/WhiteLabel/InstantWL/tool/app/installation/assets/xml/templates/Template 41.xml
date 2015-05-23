@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="shape" opacity="1" index="0" shape_type="Rectangle" color="13158600 " xpos="204" ypos="300.3" width="726.7" height="48" rotation="0"/>
+  <item type="image" opacity="1" index="1" source="assets/graphics/Lower Thirds/Design 16.png" xpos="165.25" ypos="278.75" width="499" height="58" rotation="0"/>
+  <item type="text" opacity="1" index="2" font="Arial" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="190.5" ypos="294.65" alignment="left" rotation="0" scalex="0.33937206864356995" scaley="0.33937206864356995" filter="true"><![CDATA[PRESENT YOUR VISUALS WELL]]></item>
+  <item type="image" opacity="1" index="3" source="assets/graphics/Other Icons/49.png" xpos="563.3" ypos="279" width="63.75" height="69.3" rotation="0"/>
+  <item type="text" opacity="1" index="4" font="Arial" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="218.3" ypos="330.65" alignment="left" rotation="0" scalex="0.19293999671936035" scaley="0.19293999671936035" filter="true"><![CDATA[GREAT PRESENTATION FOR YOU AND ME]]></item>
+</data>

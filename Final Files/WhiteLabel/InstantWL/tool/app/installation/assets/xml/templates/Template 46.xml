@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="shape" opacity="0.63671875" index="0" shape_type="Rectangle" color="0 " xpos="-43" ypos="-190" width="716" height="716" rotation="0"/>
+  <item type="shape" opacity="0.3671875" index="1" shape_type="Rectangle" color="16777215 " xpos="-308" ypos="290" width="1046" height="86" rotation="0"/>
+  <item type="image" opacity="1" index="2" source="assets/graphics/Lower Thirds/Design 10.png" xpos="67" ypos="263" width="514" height="63" rotation="0"/>
+  <item type="image" opacity="0.48828125" index="3" source="assets/graphics/Other Icons/live2.png" xpos="10.25" ypos="3.5" width="71.35" height="42.8" rotation="0"/>
+  <item type="text" opacity="1" index="4" font="FrnkGothITC Hv BT" size="28" color="11837@@@11837@@@11837@@@11837@@@11837@@@11837@@@11837@@@11837@@@11837@@@11837@@@11837@@@11837@@@11837@@@11837@@@11837@@@11837@@@16185078@@@16185078@@@16185078@@@16185078@@@16185078@@@16185078@@@16185078" xpos="144" ypos="272" alignment="left" rotation="0" scalex="1" scaley="1" filter="true"><![CDATA[Alicia Raymonds Blogger]]></item>
+  <item type="shape" opacity="0.25" index="5" shape_type="Rectangle" color="29825 " xpos="-8" ypos="320" width="678" height="34" rotation="0"/>
+  <item type="text" opacity="1" index="6" font="Helvetica Neue" size="17" color="11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313@@@11313" xpos="54" ypos="323" alignment="center" rotation="0" scalex="1" scaley="1" filter="true"><![CDATA[contactme@acraymonds.com  |  73 - 123 - 456 - 789  |   @acraymonds]]></item>
+  <item type="shape" opacity="1" index="7" shape_type="Star" color="11837 " xpos="95.5" ypos="285" width="18.75" height="18.05" rotation="0"/>
+  <item type="shape" opacity="1" index="8" shape_type="Star" color="11837 " xpos="529" ypos="285.25" width="18" height="17.35" rotation="0"/>
+  <item type="image" opacity="0.38671875" index="9" source="assets/graphics/Other Icons/Phone 2.png" xpos="20.5" ypos="326.75" width="24" height="24" rotation="-7.7525539516430015"/>
+  <item type="image" opacity="1" index="10" source="assets/graphics/Other Icons/5.png" xpos="200.25" ypos="41" width="224.5" height="184" rotation="0"/>
+</data>

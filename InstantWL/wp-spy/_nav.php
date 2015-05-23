@@ -3,6 +3,12 @@
     var wpspy_imageurl = "js/images/";
 </script>
 <?php 
+	error_reporting(E_ALL);
+	ini_set('display_errors', 1);
+	ini_set('max_execution_time', 300); //300 seconds = 5 minutes
+
+	include_once('../classes/check.class.php'); 
+
 	include "_styles.php";
 	include "_scripts.php";
 	include "classes/config.php";
@@ -16,11 +22,10 @@
 	$fn = new functions();
 
 	$fn->connect();
-	error_reporting(E_ALL);
-	ini_set('display_errors', 1);
-	ini_set('max_execution_time', 300); //300 seconds = 5 minutes
-
+	
 ?>
+<?php if( protectThis("*") ) : ?>
+	
 <div class="wpspy-head">
 	<div class="logo">
 		<img src="images/spy.png" draggable="false">
@@ -59,3 +64,6 @@
 	</div>
 </div>
 <div class="loading"><div class="center">Grabbing data all over the web...</div></div>
+<?php else : ?>
+	<?php header("Location: ../home.php");?>
+<?php endif; ?>

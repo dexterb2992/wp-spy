@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="image" opacity="1" index="0" source="assets/graphics/Lower Thirds/15.png" xpos="76.35" ypos="275.6" width="462.6" height="80" rotation="0"/>
+  <item type="shape" opacity="1" index="1" shape_type="Triangle" color="15867904 " xpos="167.2" ypos="332.8" width="1703936" height="1507328" rotation="0.0009853609308196377"/>
+  <item type="text" opacity="1" index="2" font="Arial" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="112" ypos="292.8" alignment="left" rotation="0" scalex="0.24999955296516418" scaley="0.24999955296516418" filter="true"><![CDATA[JAMES]]></item>
+  <item type="text" opacity="1" index="3" font="Helvetica Neue" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="112.2" ypos="314" alignment="left" rotation="0" scalex="0.20296156406402588" scaley="0.20296156406402588" filter="true"><![CDATA[REPORTING LIVE FROM DOWNTOWN]]></item>
+  <item type="text" opacity="1" index="4" font="Archivo Black" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="171.6" ypos="288.6" alignment="left" rotation="0" scalex="0.23850123584270477" scaley="0.24702706933021545" filter="true"><![CDATA[JOHNSON]]></item>
+  <item type="image" opacity="1" index="5" source="assets/graphics/Other Icons/live1.png" xpos="555.6" ypos="20.4" width="66" height="39.6" rotation="0"/>
+  <item type="image" opacity="1" index="6" source="assets/graphics/Other Icons/50.png" xpos="447.4" ypos="265.4" width="65.6" height="71.3" rotation="0"/>
+  <item type="text" opacity="1" index="7" font="Archivo Black" size="68" color="0@@@0@@@0@@@0" xpos="458.4" ypos="287.4" alignment="left" rotation="0" scalex="0.2029571533203125" scaley="0.2029571533203125" filter="true"><![CDATA[LOGO]]></item>
+</data>

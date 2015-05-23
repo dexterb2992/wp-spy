@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="image" opacity="1" index="0" source="assets/graphics/Lower Thirds/Design 6.png" xpos="-295.75" ypos="275.25" width="655" height="69" rotation="0"/>
+  <item type="image" opacity="1" index="1" source="assets/graphics/Lower Thirds/red05.png" xpos="-228" ypos="3.25" width="380" height="80" rotation="0"/>
+  <item type="text" opacity="1" index="2" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="8" ypos="286.8" alignment="left" rotation="0" scalex="0.3693230152130127" scaley="0.3693230152130127" filter="true"><![CDATA[EDWARD GARTNER]]></item>
+  <item type="text" opacity="1" index="3" font="Courier New" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="9.8" ypos="314.3" alignment="left" rotation="0" scalex="0.19522424042224884" scaley="0.19522424042224884" filter="true"><![CDATA[TECH CORRENSPONDENT]]></item>
+  <item type="text" opacity="1" index="4" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215" xpos="11.3" ypos="13.3" alignment="left" rotation="0" scalex="0.44023045897483826" scaley="0.44023045897483826" filter="true"><![CDATA[LIVE]]></item>
+  <item type="text" opacity="1" index="5" font="Helvetica Neue" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="12.15" ypos="47.65" alignment="left" rotation="0" scalex="0.1703217774629593" scaley="0.1703217774629593" filter="true"><![CDATA[CALIFORNIA, USA]]></item>
+</data>

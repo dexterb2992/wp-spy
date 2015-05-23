@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="image" opacity="1" index="0" source="assets/graphics/Placeholders/32.png" xpos="383.5" ypos="51.5" width="251.15" height="288" rotation="0"/>
+  <item type="image" opacity="1" index="1" source="assets/graphics/Lower Thirds/gray02.png" xpos="367.25" ypos="14.5" width="275.75" height="66" rotation="0"/>
+  <item type="text" opacity="1" index="2" font="Archivo Black" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="412.25" ypos="21.75" alignment="left" rotation="0" scalex="0.4912109375" scaley="0.4912109375" filter="true"><![CDATA[Follow Me]]></item>
+  <item type="image" opacity="1" index="3" source="assets/graphics/Social Media/fb2.png" xpos="470.3" ypos="83" width="67.95" height="29.4" rotation="0"/>
+  <item type="image" opacity="1" index="4" source="assets/graphics/Social Media/gPlus2.png" xpos="476.65" ypos="143.85" width="52.4" height="52.4" rotation="0"/>
+  <item type="image" opacity="1" index="5" source="assets/graphics/Social Media/twitter1.png" xpos="480.8" ypos="226.35" width="44.75" height="44.75" rotation="0"/>
+  <item type="text" opacity="1" index="6" font="Helvetica Neue" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="445.8" ypos="270.25" alignment="left" rotation="0" scalex="0.3166155517101288" scaley="0.3166155517101288" filter="true"><![CDATA[@vectorchan]]></item>
+  <item type="text" opacity="1" index="7" font="Helvetica Neue" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="415.55" ypos="116.35" alignment="left" rotation="0" scalex="0.3166045844554901" scaley="0.3166045844554901" filter="true"><![CDATA[fb.com/vectorchan]]></item>
+  <item type="text" opacity="1" index="8" font="Helvetica Neue" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="445.25" ypos="193.3" alignment="left" rotation="0" scalex="0.3166045844554901" scaley="0.3166045844554901" filter="true"><![CDATA[Vector Chan]]></item>
+  <item type="image" opacity="1" index="9" source="assets/graphics/Lower Thirds/50.png" xpos="-5.25" ypos="264" width="640" height="72" rotation="0"/>
+  <item type="text" opacity="1" index="10" font="Archivo Black" size="68" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="13.3" ypos="271.65" alignment="left" rotation="0" scalex="0.4912109375" scaley="0.4912109375" filter="true"><![CDATA[Vector Chan]]></item>
+  <item type="shape" opacity="1" index="11" shape_type="Rectangle" color="78232 " xpos="-465.55" ypos="318.6" width="1123.5" height="25.8" rotation="0"/>
+  <item type="text" opacity="1" index="12" font="Helvetica Neue" size="68" color="16777215@@@16777215@@@16777215@@@16777215" xpos="18.3" ypos="317.75" alignment="left" rotation="0" scalex="0.2590577006340027" scaley="0.2590577006340027" filter="true"><![CDATA[Host]]></item>
+</data>

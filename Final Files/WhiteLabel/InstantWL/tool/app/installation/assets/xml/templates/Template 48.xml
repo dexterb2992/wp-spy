@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="shape" opacity="0.37890625" index="0" shape_type="Rectangle" color="0 " xpos="-115" ypos="-150" width="860" height="542" rotation="0"/>
+  <item type="image" opacity="1" index="1" source="assets/graphics/Placeholders/49.png" xpos="366" ypos="36" width="224" height="262" rotation="0"/>
+  <item type="image" opacity="1" index="2" source="assets/graphics/Other Icons/1.png" xpos="68" ypos="127" width="296" height="89.15" rotation="0"/>
+  <item type="text" opacity="1" index="3" font="FrnkGothITC Hv BT" size="33" color="16514043@@@16514043@@@16514043@@@16514043@@@16514043@@@16514043@@@16514043@@@16514043@@@16514043@@@16514043@@@16514043@@@16514043@@@16514043" xpos="404" ypos="66.25" alignment="center" rotation="0" scalex="0.596045196056366" scaley="0.596045196056366" filter="true"><![CDATA[GET CONNECTED]]></item>
+  <item type="shape" opacity="0.27734375" index="4" shape_type="Rectangle" color="16777215 " xpos="414" ypos="108" width="144" height="118" rotation="0"/>
+  <item type="image" opacity="1" index="5" source="assets/graphics/Social Media/fb3.png" xpos="416" ypos="116" width="22" height="22" rotation="0"/>
+  <item type="image" opacity="1" index="6" source="assets/graphics/Social Media/gPlus1.png" xpos="418" ypos="158" width="28" height="28" rotation="0"/>
+  <item type="image" opacity="1" index="7" source="assets/graphics/Social Media/twitter2.png" xpos="418" ypos="198" width="26" height="26" rotation="0"/>
+  <item type="text" opacity="0.76953125" index="8" font="FrnkGothITC Hv BT" size="17" color="143488@@@143488@@@143488@@@143488@@@143488@@@143488@@@143488@@@143488@@@143488@@@143488@@@143488" xpos="441" ypos="114" alignment="left" rotation="0" scalex="1" scaley="1" filter="true"><![CDATA[/yesthatsme]]></item>
+  <item type="text" opacity="0.71875" index="9" font="FrnkGothITC Hv BT" size="17" color="13632512@@@13632512@@@13632512@@@13632512@@@13632512@@@13632512@@@13632512@@@13632512@@@13632512@@@13632512" xpos="446" ypos="155" alignment="left" rotation="0" scalex="1" scaley="1" filter="true"><![CDATA[yesthatsme]]></item>
+  <item type="text" opacity="1" index="10" font="FrnkGothITC Hv BT" size="17" color="167343@@@167343@@@167343@@@167343@@@167343@@@167343@@@167343@@@167343@@@167343@@@167343@@@167343" xpos="438" ypos="197" alignment="left" rotation="0" scalex="1" scaley="1" filter="true"><![CDATA[@yesthatsme]]></item>
+  <item type="text" opacity="1" index="11" font="FrnkGothITC Hv BT" size="17" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="401" ypos="234" alignment="left" rotation="0" scalex="1" scaley="1" filter="true"><![CDATA[yesthatsme.com]]></item>
+</data>

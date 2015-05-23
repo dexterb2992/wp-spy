@@ -1,0 +1,96 @@
+
+body{margin:0; padding:0; font-family:Arial, Helvetica, sans-serif;font-size:18px;  color:#212121;background:#036}
+
+/*** COMMON CSS ***/
+#main{margin:0 auto; width:760px; background:#fff;padding:20px;border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 0 5px rgba(50, 50, 50, 0.5);}
+img{border:0;}
+ul, h1, h2, h3, h4, h5{margin:0; padding:0; line-height:normal; width:100%;}
+ul li{list-style:none; float:left;}
+
+a{color:#212121; text-decoration:underline;}
+a:hover{color:#000; text-decoration:underline;}
+
+/*** HEADER ****/
+.header{ width:720px; float:left; text-align:center; font-size:50px; color:#000; line-height:50px; padding:10px 0 15px 0;}  
+.header span{font-size:22px; font-style:italic; line-height:20px;}
+.header a{color:#000; text-decoration:underline; line-height:normal;}
+.header span.underline{background:url(../images/line1.jpg) no-repeat 0 bottom; padding:0 0 5px 0; font-style:normal; font-weight:bold; line-height:normal;}
+.header span.yellow{background:#FFCC00; padding:0 10px; font-size:50px; line-height:73px}
+
+.video_holder{width:760px; float:left; padding:10px 0; text-align:center;}
+
+.main_text1{width:620px; float:left; padding:0px 50px 0 50px; line-height:27px; font-family:Arial, Helvetica, sans-serif}
+.main_text1 ul li{background:url(../images/close.jpg) no-repeat 0 0; padding:0 0 25px 50px; width:570px; font-size:22px; font-weight:bold; line-height:29px;}
+
+.impression_matter{width:620px; float:left; text-align:center; padding:20px 50px; font-size:15px; font-weight:bold;font-family:Arial, Helvetica, sans-serif}
+.impression_matter strong{font-size:37px; line-height:41px;font-family:Arial, Helvetica, sans-serif}
+
+.look_at_this_way{width:620px; float:left;  line-height:27px;padding:20px 50px; font-family:Arial, Helvetica, sans-serif}
+.look_at_this_way span{float:left; margin:0 20px 20px 0; padding:10px 20px; font-size:29px; background:#eeeeee; -moz-border-radius:100px;-webkitborder-radius:100px;border-radius:100px; font-weight:bold; font-family:Arial, Helvetica, sans-serif}
+
+.only_problem_is{width:100%; float:left; padding:20px 0; text-align:center; font-size:22px;font-family:Arial, Helvetica, sans-serif}
+.only_problem_is strong{font-size:41px; line-height:47px; font-weight:normal;font-family:Arial, Helvetica, sans-serif}
+
+.tagline1{width:100%; float:left; padding:20px 0;  line-height:41px;font-size:29px; text-align:center;font-family:Arial, Helvetica, sans-serif;}
+
+.center_image_container1{width:100%; float:left; text-align:center; padding:20px 0; line-height:27px;font-family:Arial, Helvetica, sans-serif}
+.center_image_container1 span{line-height:41px;font-size:40px;font-family:Arial, Helvetica, sans-serif}
+.red{color: #F00;}
+.center_image_container1 span.font22{font-size:22px;font-family:Arial, Helvetica, sans-serif}
+.center_image_container1 span.font54{font-size:54px;font-family:Arial, Helvetica, sans-serif}
+
+.click-to-play-discover{width:100%; float:left; background:url(../images/arrow1.jpg) no-repeat center 130px; text-align:center; font-size:33px; padding:20px 0; border-bottom:1px solid #e8e8e8;font-family:Arial, Helvetica, sans-serif}
+
+.text_content_holder{width:620px; float:left; padding:20px 50px; border-bottom:1px solid #e8e8e8; line-height:17px; font-family:Arial, Helvetica, sans-serif}
+.text_content_holder strong{font-size:24px; font-weight:normal; line-height:normal;}
+.text_content_holder .img_holder{ width:310px; float:left; text-align:center;}
+.text_content_holder .text_holder1{ width:280px; float:left; padding:0 0 0 30px;}
+.text_content_holder .text_holder2{ width:280px; float:left; padding:0 0 0 30px;}
+
+.power_user_features{width:620px; float:left; padding:20px 50px; border-bottom:1px solid #e8e8e8; text-align:center;font-family:Arial, Helvetica, sans-serif}
+.power_user_features strong{font-size:24px; font-weight:normal;}
+
+.instant_header_presence{width:100%; float:left; text-align:center; padding:20px 0;font-family:Arial, Helvetica, sans-serif}
+.instant_header_presence span{font-size:23px; color:#636363; line-height:30px;}
+.instant_header_presence strong.blue{color:#088eb5; font-weight:bold;}
+.instant_header_presence strong.orange{color:#ec6c00; font-weight:bold;}
+
+.posibilities_endlessw{width:100%; float:left; padding:20px 0; text-align:center; line-height:30px; font-weight:normal;font-family:Arial, Helvetica, sans-serif}
+.posibilities_endlessw strong{font-size:23px;}
+
+.fully_featured{width:660px; float:left; padding:20px 30px; font-family:Arial, Helvetica, sans-serif;}
+.fully_featured h1{width:100%; float:left; padding:0 0 20px 0; text-align:center;}
+.fully_featured ul li{ width:200px; float:left; font-size:14px; margin:0 30px 0 0; line-height:20px; height:130px;}
+.fully_featured ul li.nosapce {margin:0 0 0 0;}
+.fully_featured ul li img{float:right; margin:0 0 10px 10px;}
+
+.what_our_customer_say{width:100%; float:left; padding:20px 0; text-align:center; font-size:26px; line-height:45px; font-family:Arial, Helvetica, sans-serif} 
+.what_our_customer_say strong{font-size:46px; font-weight:normal;}
+.what_our_customer_say span{font-size:18px;}
+
+.testimonials_text{width:674px; margin:0 auto;  font-family:Arial, Helvetica, sans-serif}
+.testimonials_text .img_holder{ width:130px; float:left;}
+.testimonials_text .text_holder{width:490px; float:left; font-size:17px; line-height:22px;}
+.testimonials_text .text_holder span{color:#7c7c7c; font-size:21px;}
+
+.main_text2{width:620px; float:left; padding:0 50px 0 50px; line-height:27px; font-family:"Myriad Pro", Arial;}
+.main_text2 ul li{background:url(../images/symb1.png) no-repeat 10px 5px ; padding:0 0 25px 40px; width:580px; font-size:22px; }
+.main_text2 ul li strong{text-decoration:underline;}
+.main_text2 ul li.color{background:url(../images/symb1.png) no-repeat 10px 5px #ffff00; padding:5px 0 5px 40px;}
+
+.what_to_do{width:100%; float:left; padding:20px 0; text-align:center; font-size:26px; line-height:45px; } 
+.what_to_do span{font-size:46px; font-weight:normal;font-family:Arial, Helvetica, sans-serif}
+
+.add_to_cart{width:100%; float:left; background:url(../images/add-cart.png) no-repeat center 0; height:535px; padding:25px 0; font-size:15px;  line-height:22px; font-family:Arial, Helvetica, sans-serif; text-align:center;}
+.add_to_cart img{margin-top:15px;}
+.add_to_cart span{font-size:32px; color:#333; line-height:40px; font-family:"Myriad Pro", Arial;}
+.add_to_cart span strong{font-size:40px; color:#cc0000;}
+.add_to_cart span.line_thru{text-decoration:line-through;}
+
+.the_meeting_success{width:620px; float:left; padding:20px 50px; line-height:27px; font-family:Arial, Helvetica, sans-serif}
+.the_meeting_success img{margin:0 100px 0 0;}
+
+.footer{width:95%; float:left; text-align:right; font-size:10px; color:#c9c9c9; padding:25px 5px 25px 0;}
+
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="image" opacity="1" index="0" source="assets/graphics/Lower Thirds/31.png" xpos="-0.8" ypos="236.6" width="640" height="120.4" rotation="0"/>
+  <item type="shape" opacity="1" index="1" shape_type="Rectangle" color="0 " xpos="135.6" ypos="305" width="299.2" height="22.4" rotation="0"/>
+  <item type="shape" opacity="1" index="2" shape_type="Triangle" color="15867904 " xpos="167.2" ypos="332.8" width="1703936" height="1507328" rotation="0.0009853609308196377"/>
+  <item type="text" opacity="1" index="3" font="Arial" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="201.6" ypos="281" alignment="left" rotation="0" scalex="0.30992746353149414" scaley="0.30992746353149414" filter="true"><![CDATA[JAMES]]></item>
+  <item type="text" opacity="1" index="4" font="Archivo Black" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="191.2" ypos="308.4" alignment="left" rotation="0" scalex="0.14878420531749725" scaley="0.14878420531749725" filter="true"><![CDATA[REPORTING LIVE FROM DOWNTOWN]]></item>
+  <item type="text" opacity="1" index="5" font="Archivo Black" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="276.4" ypos="276.6" alignment="left" rotation="0" scalex="0.310331255197525" scaley="0.32141783833503723" filter="true"><![CDATA[JOHNSON]]></item>
+  <item type="image" opacity="1" index="6" source="assets/graphics/Other Icons/live1.png" xpos="562.8" ypos="17.35" width="59.6" height="35.75" rotation="0"/>
+  <item type="image" opacity="1" index="7" source="uploaded_image/5230b04d5ab7c.png" xpos="25.6" ypos="263.6" width="153.35" height="78.75" rotation="0"/>
+  <item type="text" opacity="1" index="8" font="Archivo Black" size="68" color="16706416@@@16706416@@@16706416@@@16706416" xpos="60.6" ypos="287" alignment="left" rotation="0" scalex="0.36850541830062866" scaley="0.36850541830062866" filter="true"><![CDATA[NEWS]]></item>
+  <item type="text" opacity="1" index="9" font="Archivo Black" size="68" color="5855577@@@5855577@@@5855577@@@5855577@@@5855577@@@5855577" xpos="21.15" ypos="249.6" alignment="left" rotation="0" scalex="0.32141783833503723" scaley="0.32141783833503723" filter="true"><![CDATA[TODAYS]]></item>
+</data>

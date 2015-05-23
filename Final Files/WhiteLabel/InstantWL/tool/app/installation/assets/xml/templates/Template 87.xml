@@ -1,0 +1,8 @@
+<data pattern_url="">
+  <item type="image" opacity="1" index="0" source="assets/graphics/Placeholders/CTA 5 (d).png" xpos="4" ypos="244" width="633" height="140" rotation="0"/>
+  <item type="text" opacity="1" index="2" font="Archivo Black" size="40" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="153.25" ypos="274" alignment="left" rotation="0" scalex="0.8102768063545227" scaley="0.8102768063545227" filter="true"><![CDATA[JOHN REYNOLDS]]></item>
+  <item type="text" opacity="1" index="3" font="Helvetica Neue" size="40" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="155.25" ypos="317" alignment="left" rotation="0" scalex="0.40633803606033325" scaley="0.40633803606033325" filter="true"><![CDATA[MUSIC ENTHUSIAST]]></item>
+  <item type="shape" opacity="1" index="4" shape_type="Rectangle" color="36666 " xpos="524" ypos="21" width="126" height="48" rotation="0"/>
+  <item type="text" opacity="1" index="5" font="Archivo Black" size="40" color="16777215@@@16777215@@@16777215@@@16777215" xpos="536.25" ypos="19" alignment="left" rotation="0" scalex="0.810272216796875" scaley="0.810272216796875" filter="true"><![CDATA[LIVE]]></item>
+  <item type="image" opacity="1" index="6" source="assets/graphics/Other Icons/43.png" xpos="82" ypos="290.25" width="38" height="42.4" rotation="0"/>
+</data>

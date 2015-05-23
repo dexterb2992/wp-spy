@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="text" opacity="0.4375" index="0" font="Archivo Black" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="270.75" ypos="237.25" alignment="center" rotation="0" scalex="0.4885101318359375" scaley="1.1965789794921875" filter="true"><![CDATA[BRENDA JOHNSON]]></item>
+  <item type="image" opacity="1" index="1" source="assets/graphics/Lower Thirds/52.png" xpos="-5.5" ypos="284" width="298.2" height="69.55" rotation="-3.7512284740468957"/>
+  <item type="text" opacity="1" index="2" font="Archivo Black" size="68" color="14971648@@@14971648@@@14971648@@@14971648@@@14971648@@@14971648@@@14971648@@@14971648@@@14971648@@@14971648@@@14971648@@@14971648@@@14971648@@@14971648" xpos="8.3" ypos="289.5" alignment="center" rotation="-2.6306070570275004" scalex="0.3378192256104486" scaley="0.3378192256104486" filter="true"><![CDATA[BRENDA JOHNSON]]></item>
+  <item type="shape" opacity="1" index="3" shape_type="Rectangle" color="16706663 " xpos="-56" ypos="324.8" width="257.15" height="31.9" rotation="-3.003207063392058"/>
+  <item type="text" opacity="1" index="4" font="Helvetica Neue" size="68" color="156916@@@156916@@@156916@@@156916@@@156916@@@156916@@@156916@@@156916@@@156916@@@156916@@@156916@@@156916@@@156916@@@156916@@@156916@@@156916@@@156916" xpos="15.15" ypos="324.3" alignment="center" rotation="-2.9993514696690338" scalex="0.26333070029827205" scaley="0.26333070029827205" filter="true"><![CDATA[Manager / Stylist]]></item>
+</data>

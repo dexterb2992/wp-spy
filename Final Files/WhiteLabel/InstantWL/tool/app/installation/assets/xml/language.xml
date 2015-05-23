@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+		<item word="undo"><![CDATA[UNDO]]></item>
+		<item word="redo"><![CDATA[REDO]]></item>
+		<item word="save"><![CDATA[SAVE]]></item>
+		<item word="load"><![CDATA[LOAD]]></item>
+		<item word="upload_image"><![CDATA[Upload Image]]></item>
+		<item word="bring_forward"><![CDATA[Bring Forward]]></item>
+		<item word="send_backward"><![CDATA[Send Backward]]></item>
+		<item word="color"><![CDATA[Color]]></item>
+		<item word="delete"><![CDATA[Delete]]></item>
+		<item word="change_bg"><![CDATA[Change Background]]></item>
+		<item word="download"><![CDATA[DOWNLOAD]]></item>
+		
+		<item word="text"><![CDATA[TEXT]]></item>
+		<item word="graphics"><![CDATA[GRAPHICS]]></item>
+		<item word="shapes"><![CDATA[SHAPES]]></item>
+		<item word="Templates"><![CDATA[TEMPLATES]]></item>
+		
+		<item word="enter_file_name"><![CDATA[ENTER YOUR NEW FILE NAME]]></item>
+		<item word="save_yes"><![CDATA[Save]]></item>
+		<item word="cancel"><![CDATA[Cancel]]></item>
+		
+		<item word="saving_successfull"><![CDATA[SAVING SUCCESSFUL!]]></item>
+		<item word="saving_design"><![CDATA[SAVING DESIGN....]]></item>
+		<item word="loading"><![CDATA[LOADING....]]></item>
+		<item word="uploading_image"><![CDATA[UPLOADING IMAGE....]]></item>
+	
+		<item word="size"><![CDATA[SIZE]]></item>
+		<item word="type"><![CDATA[TYPE]]></item>
+		<item word="add_text"><![CDATA[ADD TEXT]]></item>
+		
+		<item word="your_text"><![CDATA[YOUR TEXT]]></item>
+		
+		<item word="lower_thirds"><![CDATA[Lower Thirds]]></item>
+		<item word="social_media"><![CDATA[Social Media]]></item>
+		<item word="Placeholders"><![CDATA[Placeholders]]></item>
+		<item word="tags"><![CDATA[Tags]]></item>
+		<item word="other_icons"><![CDATA[Other Icons]]></item>
+</data>

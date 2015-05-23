@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="shape" opacity="0.44921875" index="0" shape_type="Rectangle" color="78232 " xpos="-697.3" ypos="300.65" width="1430.7" height="45.3" rotation="0"/>
+  <item type="shape" opacity="1" index="1" shape_type="Rectangle" color="16777215 " xpos="566.3" ypos="295.3" width="56" height="56" rotation="0"/>
+  <item type="text" opacity="1" index="2" font="FrnkGothITC Hv BT" size="68" color="16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215@@@16777215" xpos="286.65" ypos="310.5" alignment="left" rotation="0" scalex="0.2951669692993164" scaley="0.2951669692993164" filter="true"><![CDATA[PLEASE             THIS VIDEO]]></item>
+  <item type="image" opacity="1" index="4" source="assets/graphics/Social Media/fb2.png" xpos="365.3" ypos="307.3" width="73.25" height="31.7" rotation="0"/>
+  <item type="image" opacity="1" index="5" source="assets/graphics/Social Media/fb1.png" xpos="571.3" ypos="300.65" width="46.7" height="46.7" rotation="0"/>
+  <item type="image" opacity="1" index="6" source="assets/graphics/Other Icons/1.png" xpos="62.1" ypos="295" width="190.95" height="57.5" rotation="0"/>
+  <item type="image" opacity="0.70703125" index="7" source="assets/graphics/Other Icons/8.png" xpos="269.3" ypos="108.6" width="100" height="100" rotation="0"/>
+</data>

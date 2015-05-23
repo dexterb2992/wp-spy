@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data pattern_url="">
+  <item type="shape" opacity="0.6171875" index="0" shape_type="Rectangle" color="16777215 " xpos="-29" ypos="296" width="692" height="48" rotation="0"/>
+  <item type="shape" opacity="0.3984375" index="1" shape_type="Rectangle" color="16777215 " xpos="-340" ypos="319" width="1008" height="48" rotation="0"/>
+  <item type="shape" opacity="0.4375" index="2" shape_type="Rectangle" color="5592405 " xpos="-56" ypos="-328" width="712" height="712" rotation="0"/>
+  <item type="image" opacity="1" index="3" source="assets/graphics/Placeholders/19.png" xpos="383" ypos="49.5" width="224.6" height="279.5" rotation="3.5009448755266535"/>
+  <item type="text" opacity="1" index="4" font="Hand Of Sean" size="26" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="391" ypos="91.5" alignment="center" rotation="4.251611197047296" scalex="0.6897031694345219" scaley="0.6897031694345219" filter="true"><![CDATA[Please standby as 
+I prepare the materials 
+we will be using.
+Thanks!
+- Jess
+iceprincess.com]]></item>
+  <item type="image" opacity="1" index="5" source="assets/graphics/Other Icons/3.png" xpos="310.5" ypos="5.75" width="153.3" height="105.3" rotation="-5.001599735229984"/>
+  <item type="image" opacity="0.5" index="6" source="assets/graphics/Placeholders/1.png" xpos="29.25" ypos="35" width="179.25" height="63" rotation="0"/>
+  <item type="image" opacity="0.5078125" index="7" source="assets/graphics/Placeholders/1.png" xpos="26.75" ypos="122" width="184.65" height="64.9" rotation="0"/>
+  <item type="image" opacity="0.5" index="8" source="assets/graphics/Placeholders/1.png" xpos="26" ypos="209.75" width="186" height="65.35" rotation="0"/>
+  <item type="image" opacity="1" index="9" source="assets/graphics/Social Media/twitter1.png" xpos="42" ypos="133" width="42" height="42" rotation="0"/>
+  <item type="image" opacity="1" index="10" source="assets/graphics/Social Media/instagram (1).png" xpos="40" ypos="223" width="42" height="42" rotation="0"/>
+  <item type="image" opacity="1" index="11" source="assets/graphics/Social Media/fb1.png" xpos="42" ypos="46" width="40" height="40" rotation="0"/>
+  <item type="text" opacity="1" index="12" font="Helvetica Neue" size="21" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="85" ypos="49.75" alignment="left" rotation="0" scalex="0.9806009531021118" scaley="0.9806009531021118" filter="true"><![CDATA[/iceprincess]]></item>
+  <item type="text" opacity="1" index="13" font="Helvetica Neue" size="21" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="84" ypos="139" alignment="left" rotation="0" scalex="1" scaley="1" filter="true"><![CDATA[@iceprincess]]></item>
+  <item type="text" opacity="1" index="14" font="Helvetica Neue" size="21" color="0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0@@@0" xpos="88" ypos="228" alignment="left" rotation="0" scalex="1" scaley="1" filter="true"><![CDATA[iceprincess]]></item>
+</data>
